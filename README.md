@@ -20,4 +20,3 @@ We will link two public CMS datasets at the prescriber level using each prescrib
 [12] Dorie V, Hill J, Shalit U, Scott M, Cervone D. Automated versus do it yourself methods for causal inference: Lessons learned from a data analysis competition. Statistical Science, 34(1), 43–68, 2019.
 [13] Louizos C, Shalit U, Mooij JM, Sontag D, Zemel R, Welling M. Causal effect inference with deep latent variable models. NeurIPS, 2017.
 [14] Cinelli C, Hazlett C. Making sense of sensitivity: Extending omitted variable bias. Journal of the Royal Statistical Society, Series B, 82(1), 39–67, 2020.
-<img width="518" height="226" alt="image" src="https://github.com/user-attachments/assets/cb86e787-6870-4692-a4d9-85518433d042" />
