@@ -1,0 +1,5 @@
+# raw + derived data stay local (CMS files are public and re-downloadable; see data/README.md)
+data/interim/
+data/processed/
+*.partial
+__pycache__/
