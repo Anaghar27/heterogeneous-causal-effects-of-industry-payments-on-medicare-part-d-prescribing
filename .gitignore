@@ -27,3 +27,7 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# Private report (not shared): PDF and its working figures
+reports/report/
+*.pdf
