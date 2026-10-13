@@ -1,0 +1,160 @@
+{
+  "baseline": {
+    "auc": 0.7548026026183261,
+    "outcome_r2": 0.20029027607579197,
+    "effect_pts": 0.520415652187489,
+    "effect_se": 0.025584690467691396
+  },
+  "blocks": [
+    {
+      "block": "race mix",
+      "n_features": 6,
+      "pct_missing_avg": 56.3,
+      "AUC_gain": 0.0014,
+      "outcome_R2_gain": -0.0075,
+      "effect_pts": 0.53,
+      "effect_shift_pts": 0.009,
+      "effect_shift_pct": 1.8
+    },
+    {
+      "block": "plan / income mix",
+      "n_features": 3,
+      "pct_missing_avg": 30.5,
+      "AUC_gain": 0.0009,
+      "outcome_R2_gain": 0.0018,
+      "effect_pts": 0.523,
+      "effect_shift_pts": 0.002,
+      "effect_shift_pct": 0.5
+    },
+    {
+      "block": "drug-class mix",
+      "n_features": 3,
+      "pct_missing_avg": 53.6,
+      "AUC_gain": 0.0008,
+      "outcome_R2_gain": -0.0028,
+      "effect_pts": 0.532,
+      "effect_shift_pts": 0.012,
+      "effect_shift_pct": 2.2
+    },
+    {
+      "block": "fill pattern",
+      "n_features": 2,
+      "pct_missing_avg": 16.0,
+      "AUC_gain": 0.0018,
+      "outcome_R2_gain": -0.0069,
+      "effect_pts": 0.517,
+      "effect_shift_pts": -0.003,
+      "effect_shift_pct": -0.6
+    },
+    {
+      "block": "all four blocks",
+      "n_features": 14,
+      "pct_missing_avg": 44.4,
+      "AUC_gain": 0.0053,
+      "outcome_R2_gain": 0.0024,
+      "effect_pts": 0.534,
+      "effect_shift_pts": 0.013,
+      "effect_shift_pct": 2.5
+    }
+  ],
+  "balance": [
+    {
+      "feature": "c_share_white",
+      "block": "race mix",
+      "SMD_raw": -0.026,
+      "SMD_after_current_weights": 0.006,
+      "pct_missing": 29.8
+    },
+    {
+      "feature": "c_share_black",
+      "block": "race mix",
+      "SMD_raw": 0.012,
+      "SMD_after_current_weights": -0.02,
+      "pct_missing": 62.8
+    },
+    {
+      "feature": "c_share_api",
+      "block": "race mix",
+      "SMD_raw": 0.031,
+      "SMD_after_current_weights": -0.011,
+      "pct_missing": 67.2
+    },
+    {
+      "feature": "c_share_hispanic",
+      "block": "race mix",
+      "SMD_raw": 0.038,
+      "SMD_after_current_weights": 0.004,
+      "pct_missing": 64.8
+    },
+    {
+      "feature": "c_share_natind",
+      "block": "race mix",
+      "SMD_raw": -0.057,
+      "SMD_after_current_weights": -0.06,
+      "pct_missing": 38.9
+    },
+    {
+      "feature": "c_share_race_other",
+      "block": "race mix",
+      "SMD_raw": 0.13,
+      "SMD_after_current_weights": -0.023,
+      "pct_missing": 74.4
+    },
+    {
+      "feature": "c_share_mapd_clms",
+      "block": "plan / income mix",
+      "SMD_raw": -0.049,
+      "SMD_after_current_weights": -0.008,
+      "pct_missing": 27.6
+    },
+    {
+      "feature": "c_share_lis_clms",
+      "block": "plan / income mix",
+      "SMD_raw": -0.113,
+      "SMD_after_current_weights": -0.008,
+      "pct_missing": 30.6
+    },
+    {
+      "feature": "c_share_ge65_clms",
+      "block": "plan / income mix",
+      "SMD_raw": 0.017,
+      "SMD_after_current_weights": 0.002,
+      "pct_missing": 33.4
+    },
+    {
+      "feature": "c_share_antibiotic_clms",
+      "block": "drug-class mix",
+      "SMD_raw": -0.09,
+      "SMD_after_current_weights": -0.031,
+      "pct_missing": 39.6
+    },
+    {
+      "feature": "c_share_antipsych_clms",
+      "block": "drug-class mix",
+      "SMD_raw": 0.003,
+      "SMD_after_current_weights": -0.002,
+      "pct_missing": 46.0
+    },
+    {
+      "feature": "c_opioid_la_rate",
+      "block": "drug-class mix",
+      "SMD_raw": 0.047,
+      "SMD_after_current_weights": -0.038,
+      "pct_missing": 75.1
+    },
+    {
+      "feature": "c_fills_per_clm",
+      "block": "fill pattern",
+      "SMD_raw": 0.181,
+      "SMD_after_current_weights": -0.038,
+      "pct_missing": 16.0
+    },
+    {
+      "feature": "c_days_per_clm",
+      "block": "fill pattern",
+      "SMD_raw": 0.187,
+      "SMD_after_current_weights": -0.017,
+      "pct_missing": 16.0
+    }
+  ]
+}
