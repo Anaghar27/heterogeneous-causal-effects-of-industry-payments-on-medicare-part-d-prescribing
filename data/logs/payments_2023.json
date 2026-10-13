@@ -1,0 +1,47 @@
+{
+  "source_file": "OP_DTL_GNRL_PGYR2023_P06302026_06032026.csv",
+  "source_bytes": 8231891293,
+  "rows_raw": 14734121,
+  "recipient_type": {
+    "Covered Recipient Physician": 9685211,
+    "Covered Recipient Non-Physician Practitioner": 5016210,
+    "Covered Recipient Teaching Hospital": 32700
+  },
+  "program_year": {
+    "2023": 14734121
+  },
+  "change_type": {
+    "UNCHANGED": 14554633,
+    "CHANGED": 145835,
+    "NEW": 33653
+  },
+  "nature_raw": {
+    "Food and Beverage": 13469200,
+    "Travel and Lodging": 555654,
+    "Compensation for services other than consulting, including serving as faculty or as a speaker at a venue other than a continuing education program": 231140,
+    "Consulting Fee": 172842,
+    "Education": 163098,
+    "Gift": 31782,
+    "Honoraria": 21065,
+    "Royalty or License": 14478,
+    "Compensation for serving as faculty or as a speaker for a medical education program": 12260,
+    "Entertainment": 8042,
+    "Long term medical supply or device loan": 4192,
+    "Grant": 3008,
+    "Debt forgiveness": 1062,
+    "Acquisitions": 621,
+    "Charitable Contribution": 110
+  },
+  "dropped_non_clinician": 32700,
+  "dropped_bad_npi": 12867,
+  "unparsed_dates": 0,
+  "negative_amounts": 0,
+  "rows_kept": 14688554,
+  "usd_kept": 2514715918.06,
+  "npis_out": 935088,
+  "slim_rows_file": "payments_rows_2023.parquet",
+  "slim_bytes": 225142577,
+  "agg_file": "payments_by_npi_2023.parquet",
+  "agg_bytes": 17254285,
+  "seconds": 738
+}

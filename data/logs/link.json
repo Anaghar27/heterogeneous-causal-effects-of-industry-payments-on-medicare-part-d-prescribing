@@ -1,0 +1,124 @@
+{
+  "analytic_2023_2024": {
+    "left": "partd_by_provider_2024",
+    "right": "payments_by_npi_2023",
+    "partd_rows": 1416883,
+    "payment_npis": 935088,
+    "payment_npis_matched": 705088,
+    "payment_usd_matched_share": 0.7532,
+    "rows": 1416883,
+    "duplicate_npi": 0,
+    "pct_treated": 49.76,
+    "pct_unpaid": 50.24,
+    "payment_record_but_total_usd_le_0": 0,
+    "nulls": {
+      "NPI": 0,
+      "Prscrbr_Type": 2,
+      "Tot_Clms": 0,
+      "Brnd_Tot_Clms": 622278,
+      "Brnd_Tot_Clms_mid": 0,
+      "Tot_Benes": 145511
+    },
+    "raw_comparison": [
+      {
+        "treated": false,
+        "n": 711795,
+        "mean_tot_clms": 781.058,
+        "mean_brnd_clms_mid": 101.195,
+        "median_brnd_clms_mid": 11.5,
+        "mean_brand_share_mid": 0.137,
+        "pct_brnd_suppressed": 50.4
+      },
+      {
+        "treated": true,
+        "n": 705088,
+        "mean_tot_clms": 1636.498,
+        "mean_brnd_clms_mid": 255.532,
+        "median_brnd_clms_mid": 40.0,
+        "mean_brand_share_mid": 0.135,
+        "pct_brnd_suppressed": 37.4
+      }
+    ],
+    "raw_brand_share_higher_in_treated": false,
+    "pct_treated_top10_specialties": {
+      "Optometry": 73.7,
+      "Obstetrics & Gynecology": 62.9,
+      "Nurse Practitioner": 54.0,
+      "Physician Assistant": 51.0,
+      "Dentist": 48.5,
+      "Family Practice": 43.8,
+      "Internal Medicine": 42.3,
+      "Emergency Medicine": 19.9,
+      "Student in an Organized Health Care Education/Training Program": 9.2,
+      "Pharmacist": 0.0
+    },
+    "pct_in_partd_2022": 83.48,
+    "pct_paid_2022": 45.59,
+    "treatment_x_history": {
+      "false": {
+        "false": 596657,
+        "true": 115138
+      },
+      "true": {
+        "false": 174246,
+        "true": 530842
+      }
+    },
+    "out_bytes": 137509444
+  },
+  "analytic_2022_2023": {
+    "left": "partd_by_provider_2023",
+    "right": "payments_by_npi_2022",
+    "partd_rows": 1380665,
+    "payment_npis": 863747,
+    "payment_npis_matched": 657843,
+    "payment_usd_matched_share": 0.7445,
+    "rows": 1380665,
+    "duplicate_npi": 0,
+    "pct_treated": 47.65,
+    "pct_unpaid": 52.35,
+    "payment_record_but_total_usd_le_0": 0,
+    "nulls": {
+      "NPI": 0,
+      "Prscrbr_Type": 3,
+      "Tot_Clms": 0,
+      "Brnd_Tot_Clms": 621758,
+      "Brnd_Tot_Clms_mid": 0,
+      "Tot_Benes": 143405
+    },
+    "raw_comparison": [
+      {
+        "treated": false,
+        "n": 722822,
+        "mean_tot_clms": 769.628,
+        "mean_brnd_clms_mid": 101.045,
+        "median_brnd_clms_mid": 11.0,
+        "mean_brand_share_mid": 0.144,
+        "pct_brnd_suppressed": 51.1
+      },
+      {
+        "treated": true,
+        "n": 657843,
+        "mean_tot_clms": 1610.387,
+        "mean_brnd_clms_mid": 253.567,
+        "median_brnd_clms_mid": 39.0,
+        "mean_brand_share_mid": 0.137,
+        "pct_brnd_suppressed": 38.4
+      }
+    ],
+    "raw_brand_share_higher_in_treated": false,
+    "pct_treated_top10_specialties": {
+      "Optometry": 73.5,
+      "Obstetrics & Gynecology": 61.0,
+      "Nurse Practitioner": 50.9,
+      "Physician Assistant": 48.6,
+      "Dentist": 46.5,
+      "Family Practice": 41.7,
+      "Internal Medicine": 40.6,
+      "Emergency Medicine": 18.7,
+      "Student in an Organized Health Care Education/Training Program": 9.5,
+      "Pharmacist": 0.0
+    },
+    "out_bytes": 105925351
+  }
+}

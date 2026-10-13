@@ -1,0 +1,22 @@
+{
+  "OP_DTL_GNRL_PGYR2022_P06302026_06032026.csv": {
+    "bytes": 7439205273,
+    "sha256": "6a3922a922af978db4d1d98c4d74db5bc3f34bc56b359854811e9ad7edc0d5ef"
+  },
+  "OP_DTL_GNRL_PGYR2023_P06302026_06032026.csv": {
+    "bytes": 8231891293,
+    "sha256": "b42cca116c8c1873f987bcd7a80931125409716a63a398ebfbf99c9de2537f79"
+  },
+  "Medicare_Part_D_Prescribers_by_Provider_2022.zip": {
+    "bytes": 239962822,
+    "sha256": "b2bf4e7369cad384fcb32f52a2ad3a8ff6cd1b29f5c7a75640138b7ddd4fb011"
+  },
+  "Medicare_Part_D_Prescribers_by_Provider_2023.zip": {
+    "bytes": 247285055,
+    "sha256": "0396d20d656870f9b47a73eb6b58d9cdd6772c211d2fd400e424aed086f8ee57"
+  },
+  "Medicare_Part_D_Prescribers_by_Provider_2024.zip": {
+    "bytes": 256466194,
+    "sha256": "09ff4c9bc4adea357c3d5fce842ecabce1d33db523cbd7eb1da45f8c994cdc52"
+  }
+}
