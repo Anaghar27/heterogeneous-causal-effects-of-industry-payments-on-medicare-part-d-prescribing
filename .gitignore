@@ -1,5 +1,29 @@
-# raw + derived data stay local (CMS files are public and re-downloadable; see data/README.md)
+# Row-level CMS data stays local (public and re-downloadable; see data/README.md).
+# Only code, small aggregate logs (data/logs/*.json) and docs are committed.
 data/interim/
 data/processed/
+data/raw/
+*.parquet
+*.csv
+*.zip
+*.xlsx
+*.feather
+*.pkl
 *.partial
+
+# Python / notebooks
 __pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Secrets and local settings
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
