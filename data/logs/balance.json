@@ -1,0 +1,1705 @@
+{
+  "all": {
+    "n_covariates": 99,
+    "summary": {
+      "unweighted": {
+        "max_abs_smd": 0.4556,
+        "n_above_0.1": 24,
+        "n_above_0.05": 50,
+        "worst": "log beneficiaries",
+        "n": 1383580,
+        "ess_paid": 705076,
+        "ess_unpaid": 678504
+      },
+      "IPW (trimmed)": {
+        "max_abs_smd": 0.0041,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "specialty: Vascular Surgery",
+        "n": 1238397,
+        "ess_paid": 489443,
+        "ess_unpaid": 466048
+      },
+      "ATT": {
+        "max_abs_smd": 0.0115,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "log beneficiaries",
+        "n": 1383580,
+        "ess_paid": 705076,
+        "ess_unpaid": 192557
+      },
+      "overlap": {
+        "max_abs_smd": 0.0027,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "x22_share_under65_missing",
+        "n": 1383580,
+        "ess_paid": 526822,
+        "ess_unpaid": 519221
+      }
+    },
+    "pass_all_below_0.1": {
+      "unweighted": false,
+      "IPW (trimmed)": true,
+      "ATT": true,
+      "overlap": true
+    },
+    "overlap_by_specialty": [
+      {
+        "specialty": "Nurse Practitioner",
+        "n": 278188,
+        "pct_paid": 54.01,
+        "pct_in_0_1_0_9": 96.95,
+        "pct_trimmed": 3.57
+      },
+      {
+        "specialty": "Physician Assistant",
+        "n": 137097,
+        "pct_paid": 51.02,
+        "pct_in_0_1_0_9": 96.22,
+        "pct_trimmed": 4.34
+      },
+      {
+        "specialty": "Dentist",
+        "n": 132465,
+        "pct_paid": 48.61,
+        "pct_in_0_1_0_9": 99.99,
+        "pct_trimmed": 0.01
+      },
+      {
+        "specialty": "Internal Medicine",
+        "n": 124014,
+        "pct_paid": 44.64,
+        "pct_in_0_1_0_9": 95.85,
+        "pct_trimmed": 4.89
+      },
+      {
+        "specialty": "Family Practice",
+        "n": 112587,
+        "pct_paid": 45.08,
+        "pct_in_0_1_0_9": 96.6,
+        "pct_trimmed": 4.2
+      },
+      {
+        "specialty": "Student in an Organized Health Care Education/Training Program",
+        "n": 101131,
+        "pct_paid": 13.85,
+        "pct_in_0_1_0_9": 53.56,
+        "pct_trimmed": 48.79
+      },
+      {
+        "specialty": "Emergency Medicine",
+        "n": 53343,
+        "pct_paid": 20.78,
+        "pct_in_0_1_0_9": 96.06,
+        "pct_trimmed": 5.67
+      },
+      {
+        "specialty": "Optometry",
+        "n": 34184,
+        "pct_paid": 73.72,
+        "pct_in_0_1_0_9": 87.81,
+        "pct_trimmed": 14.1
+      },
+      {
+        "specialty": "Obstetrics & Gynecology",
+        "n": 32876,
+        "pct_paid": 64.45,
+        "pct_in_0_1_0_9": 96.16,
+        "pct_trimmed": 5.07
+      },
+      {
+        "specialty": "Psychiatry",
+        "n": 23207,
+        "pct_paid": 40.3,
+        "pct_in_0_1_0_9": 98.36,
+        "pct_trimmed": 2.0
+      },
+      {
+        "specialty": "General Surgery",
+        "n": 21758,
+        "pct_paid": 67.83,
+        "pct_in_0_1_0_9": 97.63,
+        "pct_trimmed": 3.29
+      },
+      {
+        "specialty": "Orthopedic Surgery",
+        "n": 20586,
+        "pct_paid": 82.91,
+        "pct_in_0_1_0_9": 91.97,
+        "pct_trimmed": 11.64
+      },
+      {
+        "specialty": "Cardiology",
+        "n": 19029,
+        "pct_paid": 80.4,
+        "pct_in_0_1_0_9": 75.25,
+        "pct_trimmed": 27.21
+      },
+      {
+        "specialty": "Ophthalmology",
+        "n": 18893,
+        "pct_paid": 77.56,
+        "pct_in_0_1_0_9": 70.62,
+        "pct_trimmed": 32.08
+      },
+      {
+        "specialty": "Hospitalist",
+        "n": 18325,
+        "pct_paid": 33.33,
+        "pct_in_0_1_0_9": 99.8,
+        "pct_trimmed": 0.33
+      },
+      {
+        "specialty": "Podiatry",
+        "n": 15567,
+        "pct_paid": 72.85,
+        "pct_in_0_1_0_9": 90.38,
+        "pct_trimmed": 11.87
+      },
+      {
+        "specialty": "Psychiatry & Neurology",
+        "n": 15201,
+        "pct_paid": 28.32,
+        "pct_in_0_1_0_9": 91.53,
+        "pct_trimmed": 10.33
+      },
+      {
+        "specialty": "Gastroenterology",
+        "n": 14151,
+        "pct_paid": 79.66,
+        "pct_in_0_1_0_9": 76.67,
+        "pct_trimmed": 25.6
+      },
+      {
+        "specialty": "Neurology",
+        "n": 14137,
+        "pct_paid": 68.92,
+        "pct_in_0_1_0_9": 86.9,
+        "pct_trimmed": 14.68
+      },
+      {
+        "specialty": "Dermatology",
+        "n": 13985,
+        "pct_paid": 76.55,
+        "pct_in_0_1_0_9": 84.51,
+        "pct_trimmed": 18.1
+      },
+      {
+        "specialty": "Urology",
+        "n": 10619,
+        "pct_paid": 81.61,
+        "pct_in_0_1_0_9": 57.09,
+        "pct_trimmed": 45.98
+      },
+      {
+        "specialty": "Otolaryngology",
+        "n": 10287,
+        "pct_paid": 70.79,
+        "pct_in_0_1_0_9": 93.04,
+        "pct_trimmed": 8.7
+      },
+      {
+        "specialty": "Pulmonary Disease",
+        "n": 9433,
+        "pct_paid": 74.62,
+        "pct_in_0_1_0_9": 83.25,
+        "pct_trimmed": 18.88
+      },
+      {
+        "specialty": "General Practice",
+        "n": 9257,
+        "pct_paid": 43.97,
+        "pct_in_0_1_0_9": 96.38,
+        "pct_trimmed": 4.27
+      },
+      {
+        "specialty": "Nephrology",
+        "n": 9091,
+        "pct_paid": 74.0,
+        "pct_in_0_1_0_9": 85.95,
+        "pct_trimmed": 16.21
+      },
+      {
+        "specialty": "Hematology-Oncology",
+        "n": 8793,
+        "pct_paid": 78.41,
+        "pct_in_0_1_0_9": 80.43,
+        "pct_trimmed": 21.76
+      },
+      {
+        "specialty": "Physical Medicine and Rehabilitation",
+        "n": 8789,
+        "pct_paid": 48.92,
+        "pct_in_0_1_0_9": 97.25,
+        "pct_trimmed": 3.27
+      },
+      {
+        "specialty": "Pediatric Medicine",
+        "n": 8481,
+        "pct_paid": 44.26,
+        "pct_in_0_1_0_9": 99.89,
+        "pct_trimmed": 0.13
+      },
+      {
+        "specialty": "Endocrinology",
+        "n": 6321,
+        "pct_paid": 71.11,
+        "pct_in_0_1_0_9": 85.08,
+        "pct_trimmed": 16.91
+      },
+      {
+        "specialty": "Anesthesiology",
+        "n": 6231,
+        "pct_paid": 51.6,
+        "pct_in_0_1_0_9": 86.28,
+        "pct_trimmed": 15.55
+      },
+      {
+        "specialty": "Infectious Disease",
+        "n": 5761,
+        "pct_paid": 50.11,
+        "pct_in_0_1_0_9": 98.58,
+        "pct_trimmed": 1.68
+      },
+      {
+        "specialty": "Oral Surgery (Dentist only)",
+        "n": 5505,
+        "pct_paid": 65.54,
+        "pct_in_0_1_0_9": 99.96,
+        "pct_trimmed": 0.09
+      },
+      {
+        "specialty": "Rheumatology",
+        "n": 5033,
+        "pct_paid": 74.01,
+        "pct_in_0_1_0_9": 83.97,
+        "pct_trimmed": 18.08
+      },
+      {
+        "specialty": "Radiation Oncology",
+        "n": 4782,
+        "pct_paid": 59.68,
+        "pct_in_0_1_0_9": 99.46,
+        "pct_trimmed": 0.61
+      },
+      {
+        "specialty": "Other",
+        "n": 4725,
+        "pct_paid": 41.97,
+        "pct_in_0_1_0_9": 93.74,
+        "pct_trimmed": 7.07
+      },
+      {
+        "specialty": "Interventional Cardiology",
+        "n": 4494,
+        "pct_paid": 92.92,
+        "pct_in_0_1_0_9": 18.6,
+        "pct_trimmed": 84.29
+      },
+      {
+        "specialty": "Plastic and Reconstructive Surgery",
+        "n": 3850,
+        "pct_paid": 82.21,
+        "pct_in_0_1_0_9": 88.75,
+        "pct_trimmed": 14.62
+      },
+      {
+        "specialty": "Allergy/ Immunology",
+        "n": 3816,
+        "pct_paid": 78.83,
+        "pct_in_0_1_0_9": 79.3,
+        "pct_trimmed": 22.93
+      },
+      {
+        "specialty": "Neurosurgery",
+        "n": 3785,
+        "pct_paid": 84.41,
+        "pct_in_0_1_0_9": 88.43,
+        "pct_trimmed": 17.49
+      },
+      {
+        "specialty": "Medical Oncology",
+        "n": 3484,
+        "pct_paid": 75.11,
+        "pct_in_0_1_0_9": 85.42,
+        "pct_trimmed": 16.53
+      },
+      {
+        "specialty": "Diagnostic Radiology",
+        "n": 3349,
+        "pct_paid": 41.8,
+        "pct_in_0_1_0_9": 90.95,
+        "pct_trimmed": 11.05
+      },
+      {
+        "specialty": "Vascular Surgery",
+        "n": 3346,
+        "pct_paid": 91.24,
+        "pct_in_0_1_0_9": 29.5,
+        "pct_trimmed": 74.54
+      },
+      {
+        "specialty": "Certified Nurse Midwife",
+        "n": 3144,
+        "pct_paid": 50.95,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.03
+      },
+      {
+        "specialty": "Orthopaedic Surgery",
+        "n": 2605,
+        "pct_paid": 59.5,
+        "pct_in_0_1_0_9": 73.9,
+        "pct_trimmed": 29.75
+      },
+      {
+        "specialty": "Pain Management",
+        "n": 2603,
+        "pct_paid": 82.29,
+        "pct_in_0_1_0_9": 67.31,
+        "pct_trimmed": 36.15
+      },
+      {
+        "specialty": "Clinical Cardiac Electrophysiology",
+        "n": 2500,
+        "pct_paid": 94.4,
+        "pct_in_0_1_0_9": 8.44,
+        "pct_trimmed": 93.12
+      },
+      {
+        "specialty": "Neuropsychiatry",
+        "n": 2328,
+        "pct_paid": 29.3,
+        "pct_in_0_1_0_9": 95.88,
+        "pct_trimmed": 5.03
+      },
+      {
+        "specialty": "Specialist",
+        "n": 2288,
+        "pct_paid": 32.39,
+        "pct_in_0_1_0_9": 86.32,
+        "pct_trimmed": 15.69
+      },
+      {
+        "specialty": "Certified Clinical Nurse Specialist",
+        "n": 2019,
+        "pct_paid": 58.79,
+        "pct_in_0_1_0_9": 95.25,
+        "pct_trimmed": 5.89
+      },
+      {
+        "specialty": "Critical Care (Intensivists)",
+        "n": 1955,
+        "pct_paid": 60.66,
+        "pct_in_0_1_0_9": 95.24,
+        "pct_trimmed": 5.37
+      },
+      {
+        "specialty": "Geriatric Medicine",
+        "n": 1890,
+        "pct_paid": 29.63,
+        "pct_in_0_1_0_9": 98.78,
+        "pct_trimmed": 2.49
+      },
+      {
+        "specialty": "Sports Medicine",
+        "n": 1623,
+        "pct_paid": 59.77,
+        "pct_in_0_1_0_9": 99.88,
+        "pct_trimmed": 0.18
+      },
+      {
+        "specialty": "Thoracic Surgery",
+        "n": 1588,
+        "pct_paid": 87.78,
+        "pct_in_0_1_0_9": 54.35,
+        "pct_trimmed": 52.14
+      },
+      {
+        "specialty": "Interventional Pain Management",
+        "n": 1572,
+        "pct_paid": 83.4,
+        "pct_in_0_1_0_9": 57.51,
+        "pct_trimmed": 45.99
+      },
+      {
+        "specialty": "Colorectal Surgery (Proctology)",
+        "n": 1569,
+        "pct_paid": 80.37,
+        "pct_in_0_1_0_9": 90.76,
+        "pct_trimmed": 11.09
+      },
+      {
+        "specialty": "Hand Surgery",
+        "n": 1498,
+        "pct_paid": 73.5,
+        "pct_in_0_1_0_9": 99.0,
+        "pct_trimmed": 1.47
+      },
+      {
+        "specialty": "Plastic Surgery",
+        "n": 1306,
+        "pct_paid": 70.67,
+        "pct_in_0_1_0_9": 97.01,
+        "pct_trimmed": 4.59
+      },
+      {
+        "specialty": "Hospice and Palliative Care",
+        "n": 1289,
+        "pct_paid": 17.61,
+        "pct_in_0_1_0_9": 87.12,
+        "pct_trimmed": 15.98
+      },
+      {
+        "specialty": "Preventive Medicine",
+        "n": 1070,
+        "pct_paid": 22.62,
+        "pct_in_0_1_0_9": 83.55,
+        "pct_trimmed": 20.93
+      },
+      {
+        "specialty": "Interventional Radiology",
+        "n": 1020,
+        "pct_paid": 82.25,
+        "pct_in_0_1_0_9": 74.8,
+        "pct_trimmed": 30.0
+      },
+      {
+        "specialty": "Gynecological Oncology",
+        "n": 990,
+        "pct_paid": 75.96,
+        "pct_in_0_1_0_9": 89.6,
+        "pct_trimmed": 12.53
+      },
+      {
+        "specialty": "Surgical Oncology",
+        "n": 925,
+        "pct_paid": 64.22,
+        "pct_in_0_1_0_9": 98.59,
+        "pct_trimmed": 1.62
+      },
+      {
+        "specialty": "Registered Nurse",
+        "n": 869,
+        "pct_paid": 40.85,
+        "pct_in_0_1_0_9": 97.81,
+        "pct_trimmed": 2.42
+      },
+      {
+        "specialty": "Maxillofacial Surgery",
+        "n": 848,
+        "pct_paid": 71.7,
+        "pct_in_0_1_0_9": 99.76,
+        "pct_trimmed": 0.35
+      },
+      {
+        "specialty": "Family Medicine",
+        "n": 838,
+        "pct_paid": 26.85,
+        "pct_in_0_1_0_9": 84.84,
+        "pct_trimmed": 17.3
+      },
+      {
+        "specialty": "Hematology",
+        "n": 821,
+        "pct_paid": 69.67,
+        "pct_in_0_1_0_9": 93.67,
+        "pct_trimmed": 8.16
+      },
+      {
+        "specialty": "Advanced Heart Failure and Transplant Cardiology",
+        "n": 753,
+        "pct_paid": 84.99,
+        "pct_in_0_1_0_9": 66.14,
+        "pct_trimmed": 37.85
+      },
+      {
+        "specialty": "Sleep Medicine",
+        "n": 698,
+        "pct_paid": 69.91,
+        "pct_in_0_1_0_9": 92.69,
+        "pct_trimmed": 8.74
+      },
+      {
+        "specialty": "Cardiac Surgery",
+        "n": 676,
+        "pct_paid": 91.27,
+        "pct_in_0_1_0_9": 30.92,
+        "pct_trimmed": 72.78
+      },
+      {
+        "specialty": "Osteopathic Manipulative Medicine",
+        "n": 652,
+        "pct_paid": 39.42,
+        "pct_in_0_1_0_9": 95.55,
+        "pct_trimmed": 5.37
+      },
+      {
+        "specialty": "Pathology",
+        "n": 639,
+        "pct_paid": 24.26,
+        "pct_in_0_1_0_9": 89.36,
+        "pct_trimmed": 14.08
+      },
+      {
+        "specialty": "Oral & Maxillofacial Surgery",
+        "n": 539,
+        "pct_paid": 71.61,
+        "pct_in_0_1_0_9": 96.85,
+        "pct_trimmed": 5.01
+      },
+      {
+        "specialty": "Neurological Surgery",
+        "n": 509,
+        "pct_paid": 50.88,
+        "pct_in_0_1_0_9": 94.5,
+        "pct_trimmed": 7.66
+      }
+    ]
+  },
+  "all_hist": {
+    "n_covariates": 101,
+    "summary": {
+      "unweighted": {
+        "max_abs_smd": 1.531,
+        "n_above_0.1": 26,
+        "n_above_0.05": 52,
+        "worst": "hist_log1p_usd_2022",
+        "n": 1383580,
+        "ess_paid": 705076,
+        "ess_unpaid": 678504
+      },
+      "IPW (trimmed)": {
+        "max_abs_smd": 0.0067,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "specialty: Student / trainee",
+        "n": 1017810,
+        "ess_paid": 291747,
+        "ess_unpaid": 414990
+      },
+      "ATT": {
+        "max_abs_smd": 0.0303,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "specialty: Orthopedic Surgery",
+        "n": 1383580,
+        "ess_paid": 705076,
+        "ess_unpaid": 19223
+      },
+      "overlap": {
+        "max_abs_smd": 0.0023,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "ruca_group: metro",
+        "n": 1383580,
+        "ess_paid": 357908,
+        "ess_unpaid": 447428
+      }
+    },
+    "pass_all_below_0.1": {
+      "unweighted": false,
+      "IPW (trimmed)": true,
+      "ATT": true,
+      "overlap": true
+    },
+    "overlap_by_specialty": [
+      {
+        "specialty": "Nurse Practitioner",
+        "n": 278188,
+        "pct_paid": 54.01,
+        "pct_in_0_1_0_9": 79.63,
+        "pct_trimmed": 19.73
+      },
+      {
+        "specialty": "Physician Assistant",
+        "n": 137097,
+        "pct_paid": 51.02,
+        "pct_in_0_1_0_9": 81.41,
+        "pct_trimmed": 17.9
+      },
+      {
+        "specialty": "Dentist",
+        "n": 132465,
+        "pct_paid": 48.61,
+        "pct_in_0_1_0_9": 99.27,
+        "pct_trimmed": 0.62
+      },
+      {
+        "specialty": "Internal Medicine",
+        "n": 124014,
+        "pct_paid": 44.64,
+        "pct_in_0_1_0_9": 75.92,
+        "pct_trimmed": 22.52
+      },
+      {
+        "specialty": "Family Practice",
+        "n": 112587,
+        "pct_paid": 45.08,
+        "pct_in_0_1_0_9": 75.77,
+        "pct_trimmed": 22.66
+      },
+      {
+        "specialty": "Student in an Organized Health Care Education/Training Program",
+        "n": 101131,
+        "pct_paid": 13.85,
+        "pct_in_0_1_0_9": 42.6,
+        "pct_trimmed": 54.53
+      },
+      {
+        "specialty": "Emergency Medicine",
+        "n": 53343,
+        "pct_paid": 20.78,
+        "pct_in_0_1_0_9": 84.07,
+        "pct_trimmed": 11.28
+      },
+      {
+        "specialty": "Optometry",
+        "n": 34184,
+        "pct_paid": 73.72,
+        "pct_in_0_1_0_9": 59.32,
+        "pct_trimmed": 39.55
+      },
+      {
+        "specialty": "Obstetrics & Gynecology",
+        "n": 32876,
+        "pct_paid": 64.45,
+        "pct_in_0_1_0_9": 66.38,
+        "pct_trimmed": 32.56
+      },
+      {
+        "specialty": "Psychiatry",
+        "n": 23207,
+        "pct_paid": 40.3,
+        "pct_in_0_1_0_9": 77.57,
+        "pct_trimmed": 19.98
+      },
+      {
+        "specialty": "General Surgery",
+        "n": 21758,
+        "pct_paid": 67.83,
+        "pct_in_0_1_0_9": 70.3,
+        "pct_trimmed": 27.25
+      },
+      {
+        "specialty": "Orthopedic Surgery",
+        "n": 20586,
+        "pct_paid": 82.91,
+        "pct_in_0_1_0_9": 44.29,
+        "pct_trimmed": 54.3
+      },
+      {
+        "specialty": "Cardiology",
+        "n": 19029,
+        "pct_paid": 80.4,
+        "pct_in_0_1_0_9": 42.59,
+        "pct_trimmed": 56.38
+      },
+      {
+        "specialty": "Ophthalmology",
+        "n": 18893,
+        "pct_paid": 77.56,
+        "pct_in_0_1_0_9": 44.88,
+        "pct_trimmed": 53.74
+      },
+      {
+        "specialty": "Hospitalist",
+        "n": 18325,
+        "pct_paid": 33.33,
+        "pct_in_0_1_0_9": 91.19,
+        "pct_trimmed": 6.98
+      },
+      {
+        "specialty": "Podiatry",
+        "n": 15567,
+        "pct_paid": 72.85,
+        "pct_in_0_1_0_9": 55.98,
+        "pct_trimmed": 42.77
+      },
+      {
+        "specialty": "Psychiatry & Neurology",
+        "n": 15201,
+        "pct_paid": 28.32,
+        "pct_in_0_1_0_9": 65.86,
+        "pct_trimmed": 29.99
+      },
+      {
+        "specialty": "Gastroenterology",
+        "n": 14151,
+        "pct_paid": 79.66,
+        "pct_in_0_1_0_9": 43.5,
+        "pct_trimmed": 55.56
+      },
+      {
+        "specialty": "Neurology",
+        "n": 14137,
+        "pct_paid": 68.92,
+        "pct_in_0_1_0_9": 58.49,
+        "pct_trimmed": 40.53
+      },
+      {
+        "specialty": "Dermatology",
+        "n": 13985,
+        "pct_paid": 76.55,
+        "pct_in_0_1_0_9": 45.03,
+        "pct_trimmed": 54.37
+      },
+      {
+        "specialty": "Urology",
+        "n": 10619,
+        "pct_paid": 81.61,
+        "pct_in_0_1_0_9": 37.09,
+        "pct_trimmed": 61.64
+      },
+      {
+        "specialty": "Otolaryngology",
+        "n": 10287,
+        "pct_paid": 70.79,
+        "pct_in_0_1_0_9": 60.28,
+        "pct_trimmed": 38.43
+      },
+      {
+        "specialty": "Pulmonary Disease",
+        "n": 9433,
+        "pct_paid": 74.62,
+        "pct_in_0_1_0_9": 53.06,
+        "pct_trimmed": 45.97
+      },
+      {
+        "specialty": "General Practice",
+        "n": 9257,
+        "pct_paid": 43.97,
+        "pct_in_0_1_0_9": 80.98,
+        "pct_trimmed": 17.47
+      },
+      {
+        "specialty": "Nephrology",
+        "n": 9091,
+        "pct_paid": 74.0,
+        "pct_in_0_1_0_9": 58.53,
+        "pct_trimmed": 40.45
+      },
+      {
+        "specialty": "Hematology-Oncology",
+        "n": 8793,
+        "pct_paid": 78.41,
+        "pct_in_0_1_0_9": 49.56,
+        "pct_trimmed": 49.2
+      },
+      {
+        "specialty": "Physical Medicine and Rehabilitation",
+        "n": 8789,
+        "pct_paid": 48.92,
+        "pct_in_0_1_0_9": 81.99,
+        "pct_trimmed": 16.71
+      },
+      {
+        "specialty": "Pediatric Medicine",
+        "n": 8481,
+        "pct_paid": 44.26,
+        "pct_in_0_1_0_9": 84.62,
+        "pct_trimmed": 13.39
+      },
+      {
+        "specialty": "Endocrinology",
+        "n": 6321,
+        "pct_paid": 71.11,
+        "pct_in_0_1_0_9": 56.92,
+        "pct_trimmed": 42.19
+      },
+      {
+        "specialty": "Anesthesiology",
+        "n": 6231,
+        "pct_paid": 51.6,
+        "pct_in_0_1_0_9": 64.1,
+        "pct_trimmed": 33.43
+      },
+      {
+        "specialty": "Infectious Disease",
+        "n": 5761,
+        "pct_paid": 50.11,
+        "pct_in_0_1_0_9": 83.25,
+        "pct_trimmed": 15.76
+      },
+      {
+        "specialty": "Oral Surgery (Dentist only)",
+        "n": 5505,
+        "pct_paid": 65.54,
+        "pct_in_0_1_0_9": 83.03,
+        "pct_trimmed": 15.17
+      },
+      {
+        "specialty": "Rheumatology",
+        "n": 5033,
+        "pct_paid": 74.01,
+        "pct_in_0_1_0_9": 51.0,
+        "pct_trimmed": 48.28
+      },
+      {
+        "specialty": "Radiation Oncology",
+        "n": 4782,
+        "pct_paid": 59.68,
+        "pct_in_0_1_0_9": 87.35,
+        "pct_trimmed": 11.46
+      },
+      {
+        "specialty": "Other",
+        "n": 4725,
+        "pct_paid": 41.97,
+        "pct_in_0_1_0_9": 69.86,
+        "pct_trimmed": 28.21
+      },
+      {
+        "specialty": "Interventional Cardiology",
+        "n": 4494,
+        "pct_paid": 92.92,
+        "pct_in_0_1_0_9": 17.49,
+        "pct_trimmed": 81.78
+      },
+      {
+        "specialty": "Plastic and Reconstructive Surgery",
+        "n": 3850,
+        "pct_paid": 82.21,
+        "pct_in_0_1_0_9": 43.87,
+        "pct_trimmed": 54.83
+      },
+      {
+        "specialty": "Allergy/ Immunology",
+        "n": 3816,
+        "pct_paid": 78.83,
+        "pct_in_0_1_0_9": 40.33,
+        "pct_trimmed": 58.75
+      },
+      {
+        "specialty": "Neurosurgery",
+        "n": 3785,
+        "pct_paid": 84.41,
+        "pct_in_0_1_0_9": 41.14,
+        "pct_trimmed": 57.7
+      },
+      {
+        "specialty": "Medical Oncology",
+        "n": 3484,
+        "pct_paid": 75.11,
+        "pct_in_0_1_0_9": 57.41,
+        "pct_trimmed": 41.3
+      },
+      {
+        "specialty": "Diagnostic Radiology",
+        "n": 3349,
+        "pct_paid": 41.8,
+        "pct_in_0_1_0_9": 52.64,
+        "pct_trimmed": 43.89
+      },
+      {
+        "specialty": "Vascular Surgery",
+        "n": 3346,
+        "pct_paid": 91.24,
+        "pct_in_0_1_0_9": 23.25,
+        "pct_trimmed": 75.94
+      },
+      {
+        "specialty": "Certified Nurse Midwife",
+        "n": 3144,
+        "pct_paid": 50.95,
+        "pct_in_0_1_0_9": 86.64,
+        "pct_trimmed": 12.56
+      },
+      {
+        "specialty": "Orthopaedic Surgery",
+        "n": 2605,
+        "pct_paid": 59.5,
+        "pct_in_0_1_0_9": 51.79,
+        "pct_trimmed": 46.53
+      },
+      {
+        "specialty": "Pain Management",
+        "n": 2603,
+        "pct_paid": 82.29,
+        "pct_in_0_1_0_9": 38.26,
+        "pct_trimmed": 60.89
+      },
+      {
+        "specialty": "Clinical Cardiac Electrophysiology",
+        "n": 2500,
+        "pct_paid": 94.4,
+        "pct_in_0_1_0_9": 14.12,
+        "pct_trimmed": 85.64
+      },
+      {
+        "specialty": "Neuropsychiatry",
+        "n": 2328,
+        "pct_paid": 29.3,
+        "pct_in_0_1_0_9": 64.99,
+        "pct_trimmed": 28.65
+      },
+      {
+        "specialty": "Specialist",
+        "n": 2288,
+        "pct_paid": 32.39,
+        "pct_in_0_1_0_9": 55.29,
+        "pct_trimmed": 40.65
+      },
+      {
+        "specialty": "Certified Clinical Nurse Specialist",
+        "n": 2019,
+        "pct_paid": 58.79,
+        "pct_in_0_1_0_9": 71.92,
+        "pct_trimmed": 27.24
+      },
+      {
+        "specialty": "Critical Care (Intensivists)",
+        "n": 1955,
+        "pct_paid": 60.66,
+        "pct_in_0_1_0_9": 73.25,
+        "pct_trimmed": 25.83
+      },
+      {
+        "specialty": "Geriatric Medicine",
+        "n": 1890,
+        "pct_paid": 29.63,
+        "pct_in_0_1_0_9": 83.33,
+        "pct_trimmed": 13.7
+      },
+      {
+        "specialty": "Sports Medicine",
+        "n": 1623,
+        "pct_paid": 59.77,
+        "pct_in_0_1_0_9": 82.13,
+        "pct_trimmed": 16.57
+      },
+      {
+        "specialty": "Thoracic Surgery",
+        "n": 1588,
+        "pct_paid": 87.78,
+        "pct_in_0_1_0_9": 29.91,
+        "pct_trimmed": 69.02
+      },
+      {
+        "specialty": "Interventional Pain Management",
+        "n": 1572,
+        "pct_paid": 83.4,
+        "pct_in_0_1_0_9": 34.61,
+        "pct_trimmed": 64.82
+      },
+      {
+        "specialty": "Colorectal Surgery (Proctology)",
+        "n": 1569,
+        "pct_paid": 80.37,
+        "pct_in_0_1_0_9": 52.01,
+        "pct_trimmed": 46.21
+      },
+      {
+        "specialty": "Hand Surgery",
+        "n": 1498,
+        "pct_paid": 73.5,
+        "pct_in_0_1_0_9": 68.16,
+        "pct_trimmed": 29.71
+      },
+      {
+        "specialty": "Plastic Surgery",
+        "n": 1306,
+        "pct_paid": 70.67,
+        "pct_in_0_1_0_9": 55.82,
+        "pct_trimmed": 42.19
+      },
+      {
+        "specialty": "Hospice and Palliative Care",
+        "n": 1289,
+        "pct_paid": 17.61,
+        "pct_in_0_1_0_9": 64.7,
+        "pct_trimmed": 27.15
+      },
+      {
+        "specialty": "Preventive Medicine",
+        "n": 1070,
+        "pct_paid": 22.62,
+        "pct_in_0_1_0_9": 53.74,
+        "pct_trimmed": 40.93
+      },
+      {
+        "specialty": "Interventional Radiology",
+        "n": 1020,
+        "pct_paid": 82.25,
+        "pct_in_0_1_0_9": 39.71,
+        "pct_trimmed": 59.8
+      },
+      {
+        "specialty": "Gynecological Oncology",
+        "n": 990,
+        "pct_paid": 75.96,
+        "pct_in_0_1_0_9": 64.14,
+        "pct_trimmed": 34.14
+      },
+      {
+        "specialty": "Surgical Oncology",
+        "n": 925,
+        "pct_paid": 64.22,
+        "pct_in_0_1_0_9": 86.49,
+        "pct_trimmed": 11.68
+      },
+      {
+        "specialty": "Registered Nurse",
+        "n": 869,
+        "pct_paid": 40.85,
+        "pct_in_0_1_0_9": 84.23,
+        "pct_trimmed": 14.61
+      },
+      {
+        "specialty": "Maxillofacial Surgery",
+        "n": 848,
+        "pct_paid": 71.7,
+        "pct_in_0_1_0_9": 75.35,
+        "pct_trimmed": 23.82
+      },
+      {
+        "specialty": "Family Medicine",
+        "n": 838,
+        "pct_paid": 26.85,
+        "pct_in_0_1_0_9": 70.88,
+        "pct_trimmed": 27.45
+      },
+      {
+        "specialty": "Hematology",
+        "n": 821,
+        "pct_paid": 69.67,
+        "pct_in_0_1_0_9": 66.26,
+        "pct_trimmed": 33.13
+      },
+      {
+        "specialty": "Advanced Heart Failure and Transplant Cardiology",
+        "n": 753,
+        "pct_paid": 84.99,
+        "pct_in_0_1_0_9": 34.26,
+        "pct_trimmed": 64.41
+      },
+      {
+        "specialty": "Sleep Medicine",
+        "n": 698,
+        "pct_paid": 69.91,
+        "pct_in_0_1_0_9": 67.48,
+        "pct_trimmed": 31.66
+      },
+      {
+        "specialty": "Cardiac Surgery",
+        "n": 676,
+        "pct_paid": 91.27,
+        "pct_in_0_1_0_9": 25.44,
+        "pct_trimmed": 73.67
+      },
+      {
+        "specialty": "Osteopathic Manipulative Medicine",
+        "n": 652,
+        "pct_paid": 39.42,
+        "pct_in_0_1_0_9": 70.71,
+        "pct_trimmed": 27.15
+      },
+      {
+        "specialty": "Pathology",
+        "n": 639,
+        "pct_paid": 24.26,
+        "pct_in_0_1_0_9": 60.09,
+        "pct_trimmed": 34.12
+      },
+      {
+        "specialty": "Oral & Maxillofacial Surgery",
+        "n": 539,
+        "pct_paid": 71.61,
+        "pct_in_0_1_0_9": 73.28,
+        "pct_trimmed": 23.56
+      },
+      {
+        "specialty": "Neurological Surgery",
+        "n": 509,
+        "pct_paid": 50.88,
+        "pct_in_0_1_0_9": 77.01,
+        "pct_trimmed": 20.83
+      }
+    ]
+  },
+  "incident": {
+    "n_covariates": 99,
+    "summary": {
+      "unweighted": {
+        "max_abs_smd": 0.3567,
+        "n_above_0.1": 9,
+        "n_above_0.05": 27,
+        "worst": "specialty: Student / trainee",
+        "n": 737618,
+        "ess_paid": 174240,
+        "ess_unpaid": 563378
+      },
+      "IPW (trimmed)": {
+        "max_abs_smd": 0.0056,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "specialty: Student / trainee",
+        "n": 653882,
+        "ess_paid": 141147,
+        "ess_unpaid": 470269
+      },
+      "ATT": {
+        "max_abs_smd": 0.0056,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "x22_opioid_rate_missing",
+        "n": 737618,
+        "ess_paid": 174240,
+        "ess_unpaid": 353926
+      },
+      "overlap": {
+        "max_abs_smd": 0.0024,
+        "n_above_0.1": 0,
+        "n_above_0.05": 0,
+        "worst": "specialty: Neurosurgery",
+        "n": 737618,
+        "ess_paid": 168707,
+        "ess_unpaid": 437277
+      }
+    },
+    "pass_all_below_0.1": {
+      "unweighted": false,
+      "IPW (trimmed)": true,
+      "ATT": true,
+      "overlap": true
+    },
+    "overlap_by_specialty": [
+      {
+        "specialty": "Nurse Practitioner",
+        "n": 149144,
+        "pct_paid": 29.24,
+        "pct_in_0_1_0_9": 99.89,
+        "pct_trimmed": 0.05
+      },
+      {
+        "specialty": "Student in an Organized Health Care Education/Training Program",
+        "n": 92129,
+        "pct_paid": 8.58,
+        "pct_in_0_1_0_9": 37.97,
+        "pct_trimmed": 58.58
+      },
+      {
+        "specialty": "Physician Assistant",
+        "n": 75369,
+        "pct_paid": 26.04,
+        "pct_in_0_1_0_9": 99.74,
+        "pct_trimmed": 0.14
+      },
+      {
+        "specialty": "Internal Medicine",
+        "n": 73112,
+        "pct_paid": 20.17,
+        "pct_in_0_1_0_9": 87.69,
+        "pct_trimmed": 9.95
+      },
+      {
+        "specialty": "Dentist",
+        "n": 72428,
+        "pct_paid": 32.36,
+        "pct_in_0_1_0_9": 99.96,
+        "pct_trimmed": 0.02
+      },
+      {
+        "specialty": "Family Practice",
+        "n": 65126,
+        "pct_paid": 20.08,
+        "pct_in_0_1_0_9": 89.46,
+        "pct_trimmed": 8.39
+      },
+      {
+        "specialty": "Emergency Medicine",
+        "n": 43304,
+        "pct_paid": 13.32,
+        "pct_in_0_1_0_9": 80.8,
+        "pct_trimmed": 12.65
+      },
+      {
+        "specialty": "Psychiatry",
+        "n": 14295,
+        "pct_paid": 16.08,
+        "pct_in_0_1_0_9": 88.65,
+        "pct_trimmed": 7.18
+      },
+      {
+        "specialty": "Hospitalist",
+        "n": 12850,
+        "pct_paid": 17.97,
+        "pct_in_0_1_0_9": 93.36,
+        "pct_trimmed": 3.89
+      },
+      {
+        "specialty": "Obstetrics & Gynecology",
+        "n": 12702,
+        "pct_paid": 30.81,
+        "pct_in_0_1_0_9": 96.55,
+        "pct_trimmed": 2.97
+      },
+      {
+        "specialty": "Psychiatry & Neurology",
+        "n": 11497,
+        "pct_paid": 13.63,
+        "pct_in_0_1_0_9": 67.18,
+        "pct_trimmed": 26.39
+      },
+      {
+        "specialty": "Optometry",
+        "n": 9804,
+        "pct_paid": 36.68,
+        "pct_in_0_1_0_9": 99.87,
+        "pct_trimmed": 0.06
+      },
+      {
+        "specialty": "General Surgery",
+        "n": 8083,
+        "pct_paid": 38.2,
+        "pct_in_0_1_0_9": 95.4,
+        "pct_trimmed": 4.12
+      },
+      {
+        "specialty": "General Practice",
+        "n": 5521,
+        "pct_paid": 21.72,
+        "pct_in_0_1_0_9": 88.9,
+        "pct_trimmed": 9.22
+      },
+      {
+        "specialty": "Pediatric Medicine",
+        "n": 4934,
+        "pct_paid": 18.67,
+        "pct_in_0_1_0_9": 88.63,
+        "pct_trimmed": 8.82
+      },
+      {
+        "specialty": "Physical Medicine and Rehabilitation",
+        "n": 4810,
+        "pct_paid": 23.18,
+        "pct_in_0_1_0_9": 97.75,
+        "pct_trimmed": 1.46
+      },
+      {
+        "specialty": "Neurology",
+        "n": 4765,
+        "pct_paid": 29.99,
+        "pct_in_0_1_0_9": 99.62,
+        "pct_trimmed": 0.19
+      },
+      {
+        "specialty": "Ophthalmology",
+        "n": 4678,
+        "pct_paid": 36.0,
+        "pct_in_0_1_0_9": 95.0,
+        "pct_trimmed": 4.36
+      },
+      {
+        "specialty": "Podiatry",
+        "n": 4493,
+        "pct_paid": 32.92,
+        "pct_in_0_1_0_9": 98.2,
+        "pct_trimmed": 1.38
+      },
+      {
+        "specialty": "Cardiology",
+        "n": 3835,
+        "pct_paid": 36.51,
+        "pct_in_0_1_0_9": 99.82,
+        "pct_trimmed": 0.1
+      },
+      {
+        "specialty": "Dermatology",
+        "n": 3792,
+        "pct_paid": 33.28,
+        "pct_in_0_1_0_9": 97.52,
+        "pct_trimmed": 1.98
+      },
+      {
+        "specialty": "Orthopedic Surgery",
+        "n": 3511,
+        "pct_paid": 45.2,
+        "pct_in_0_1_0_9": 99.94,
+        "pct_trimmed": 0.06
+      },
+      {
+        "specialty": "Otolaryngology",
+        "n": 3371,
+        "pct_paid": 36.22,
+        "pct_in_0_1_0_9": 96.29,
+        "pct_trimmed": 3.17
+      },
+      {
+        "specialty": "Anesthesiology",
+        "n": 3162,
+        "pct_paid": 20.62,
+        "pct_in_0_1_0_9": 82.99,
+        "pct_trimmed": 13.06
+      },
+      {
+        "specialty": "Gastroenterology",
+        "n": 3110,
+        "pct_paid": 36.88,
+        "pct_in_0_1_0_9": 99.9,
+        "pct_trimmed": 0.03
+      },
+      {
+        "specialty": "Infectious Disease",
+        "n": 3071,
+        "pct_paid": 24.68,
+        "pct_in_0_1_0_9": 99.35,
+        "pct_trimmed": 0.36
+      },
+      {
+        "specialty": "Other",
+        "n": 2982,
+        "pct_paid": 18.75,
+        "pct_in_0_1_0_9": 78.44,
+        "pct_trimmed": 19.05
+      },
+      {
+        "specialty": "Nephrology",
+        "n": 2670,
+        "pct_paid": 40.3,
+        "pct_in_0_1_0_9": 99.81,
+        "pct_trimmed": 0.15
+      },
+      {
+        "specialty": "Pulmonary Disease",
+        "n": 2662,
+        "pct_paid": 35.99,
+        "pct_in_0_1_0_9": 99.92,
+        "pct_trimmed": 0.04
+      },
+      {
+        "specialty": "Hematology-Oncology",
+        "n": 2154,
+        "pct_paid": 41.41,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Urology",
+        "n": 2133,
+        "pct_paid": 38.49,
+        "pct_in_0_1_0_9": 91.51,
+        "pct_trimmed": 7.45
+      },
+      {
+        "specialty": "Radiation Oncology",
+        "n": 2098,
+        "pct_paid": 35.08,
+        "pct_in_0_1_0_9": 98.67,
+        "pct_trimmed": 0.91
+      },
+      {
+        "specialty": "Oral Surgery (Dentist only)",
+        "n": 2037,
+        "pct_paid": 38.39,
+        "pct_in_0_1_0_9": 99.8,
+        "pct_trimmed": 0.2
+      },
+      {
+        "specialty": "Diagnostic Radiology",
+        "n": 2022,
+        "pct_paid": 13.55,
+        "pct_in_0_1_0_9": 64.94,
+        "pct_trimmed": 28.78
+      },
+      {
+        "specialty": "Endocrinology",
+        "n": 1877,
+        "pct_paid": 32.13,
+        "pct_in_0_1_0_9": 99.79,
+        "pct_trimmed": 0.16
+      },
+      {
+        "specialty": "Certified Nurse Midwife",
+        "n": 1706,
+        "pct_paid": 27.84,
+        "pct_in_0_1_0_9": 99.82,
+        "pct_trimmed": 0.12
+      },
+      {
+        "specialty": "Neuropsychiatry",
+        "n": 1698,
+        "pct_paid": 12.96,
+        "pct_in_0_1_0_9": 64.9,
+        "pct_trimmed": 25.32
+      },
+      {
+        "specialty": "Specialist",
+        "n": 1562,
+        "pct_paid": 12.29,
+        "pct_in_0_1_0_9": 53.33,
+        "pct_trimmed": 40.4
+      },
+      {
+        "specialty": "Geriatric Medicine",
+        "n": 1413,
+        "pct_paid": 16.28,
+        "pct_in_0_1_0_9": 83.65,
+        "pct_trimmed": 10.9
+      },
+      {
+        "specialty": "Rheumatology",
+        "n": 1377,
+        "pct_paid": 31.59,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Orthopaedic Surgery",
+        "n": 1334,
+        "pct_paid": 30.73,
+        "pct_in_0_1_0_9": 74.66,
+        "pct_trimmed": 21.89
+      },
+      {
+        "specialty": "Hospice and Palliative Care",
+        "n": 1119,
+        "pct_paid": 12.33,
+        "pct_in_0_1_0_9": 66.4,
+        "pct_trimmed": 26.36
+      },
+      {
+        "specialty": "Medical Oncology",
+        "n": 1008,
+        "pct_paid": 40.97,
+        "pct_in_0_1_0_9": 99.8,
+        "pct_trimmed": 0.2
+      },
+      {
+        "specialty": "Certified Clinical Nurse Specialist",
+        "n": 891,
+        "pct_paid": 25.93,
+        "pct_in_0_1_0_9": 98.65,
+        "pct_trimmed": 0.67
+      },
+      {
+        "specialty": "Allergy/ Immunology",
+        "n": 863,
+        "pct_paid": 31.98,
+        "pct_in_0_1_0_9": 95.37,
+        "pct_trimmed": 4.4
+      },
+      {
+        "specialty": "Critical Care (Intensivists)",
+        "n": 845,
+        "pct_paid": 30.65,
+        "pct_in_0_1_0_9": 99.41,
+        "pct_trimmed": 0.47
+      },
+      {
+        "specialty": "Preventive Medicine",
+        "n": 842,
+        "pct_paid": 10.21,
+        "pct_in_0_1_0_9": 40.26,
+        "pct_trimmed": 52.73
+      },
+      {
+        "specialty": "Sports Medicine",
+        "n": 684,
+        "pct_paid": 30.12,
+        "pct_in_0_1_0_9": 99.85,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Neurosurgery",
+        "n": 674,
+        "pct_paid": 48.37,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Family Medicine",
+        "n": 662,
+        "pct_paid": 17.22,
+        "pct_in_0_1_0_9": 64.05,
+        "pct_trimmed": 31.57
+      },
+      {
+        "specialty": "Plastic and Reconstructive Surgery",
+        "n": 658,
+        "pct_paid": 39.67,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Registered Nurse",
+        "n": 564,
+        "pct_paid": 20.57,
+        "pct_in_0_1_0_9": 87.94,
+        "pct_trimmed": 9.22
+      },
+      {
+        "specialty": "Pathology",
+        "n": 499,
+        "pct_paid": 13.03,
+        "pct_in_0_1_0_9": 66.33,
+        "pct_trimmed": 27.05
+      },
+      {
+        "specialty": "Pain Management",
+        "n": 445,
+        "pct_paid": 35.73,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Hand Surgery",
+        "n": 402,
+        "pct_paid": 44.03,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Osteopathic Manipulative Medicine",
+        "n": 400,
+        "pct_paid": 16.25,
+        "pct_in_0_1_0_9": 78.5,
+        "pct_trimmed": 16.0
+      },
+      {
+        "specialty": "Surgical Oncology",
+        "n": 389,
+        "pct_paid": 41.13,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Plastic Surgery",
+        "n": 384,
+        "pct_paid": 28.65,
+        "pct_in_0_1_0_9": 90.89,
+        "pct_trimmed": 6.77
+      },
+      {
+        "specialty": "Colorectal Surgery (Proctology)",
+        "n": 367,
+        "pct_paid": 50.14,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Interventional Cardiology",
+        "n": 344,
+        "pct_paid": 47.97,
+        "pct_in_0_1_0_9": 99.42,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Neurological Surgery",
+        "n": 340,
+        "pct_paid": 35.29,
+        "pct_in_0_1_0_9": 85.0,
+        "pct_trimmed": 12.65
+      },
+      {
+        "specialty": "Gynecological Oncology",
+        "n": 308,
+        "pct_paid": 49.03,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Vascular Surgery",
+        "n": 306,
+        "pct_paid": 56.21,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Hematology",
+        "n": 288,
+        "pct_paid": 40.28,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Maxillofacial Surgery",
+        "n": 265,
+        "pct_paid": 42.26,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Sleep Medicine",
+        "n": 256,
+        "pct_paid": 38.28,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Interventional Pain Management",
+        "n": 245,
+        "pct_paid": 29.8,
+        "pct_in_0_1_0_9": 99.59,
+        "pct_trimmed": 0.41
+      },
+      {
+        "specialty": "Interventional Radiology",
+        "n": 207,
+        "pct_paid": 37.2,
+        "pct_in_0_1_0_9": 98.55,
+        "pct_trimmed": 0.97
+      },
+      {
+        "specialty": "Thoracic Surgery",
+        "n": 197,
+        "pct_paid": 44.67,
+        "pct_in_0_1_0_9": 99.49,
+        "pct_trimmed": 0.51
+      },
+      {
+        "specialty": "Oral & Maxillofacial Surgery",
+        "n": 187,
+        "pct_paid": 45.99,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Clinical Cardiac Electrophysiology",
+        "n": 167,
+        "pct_paid": 52.1,
+        "pct_in_0_1_0_9": 99.4,
+        "pct_trimmed": 0.6
+      },
+      {
+        "specialty": "Advanced Heart Failure and Transplant Cardiology",
+        "n": 121,
+        "pct_paid": 37.19,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      },
+      {
+        "specialty": "Cardiac Surgery",
+        "n": 70,
+        "pct_paid": 57.14,
+        "pct_in_0_1_0_9": 100.0,
+        "pct_trimmed": 0.0
+      }
+    ]
+  },
+  "layer_a_shap": {
+    "mean_abs_shap": {
+      "specialty": 0.5174,
+      "log cost per claim": 0.3389,
+      "region": 0.2333,
+      "new in 2024 (no 2022 data)": 0.1789,
+      "log beneficiaries": 0.1637,
+      "log total claims": 0.1506,
+      "patient mean age": 0.0843,
+      "opioid prescribing rate": 0.0627,
+      "patient risk score": 0.0594,
+      "brand share 2022": 0.0588,
+      "share dual-eligible": 0.0487,
+      "x22_share_female_missing": 0.0401,
+      "ruca_group": 0.0395,
+      "share female patients": 0.031,
+      "share under 65": 0.0298,
+      "x22_share_dual_missing": 0.0092,
+      "x22_opioid_rate_missing": 0.0067,
+      "x22_share_under65_missing": 0.0047,
+      "x_benes_suppressed": 0.0011
+    }
+  }
+}
