@@ -1,0 +1,622 @@
+{
+  "incident": {
+    "n": 677749,
+    "n_trimmed_sample": 610137,
+    "pct_paid": 24.26,
+    "ate_lo": {
+      "est": 0.4248,
+      "se": 0.0242,
+      "ci_lo": 0.3774,
+      "ci_hi": 0.4722
+    },
+    "ate_lo_untrimmed": {
+      "est": 0.4047,
+      "se": 0.0256,
+      "ci_lo": 0.3546,
+      "ci_hi": 0.4548
+    },
+    "att_lo": {
+      "est": 0.3616,
+      "se": 0.0233,
+      "ci_lo": 0.3159,
+      "ci_hi": 0.4073
+    },
+    "naive_lo": 1.4545,
+    "ate_mid": {
+      "est": 0.3463,
+      "se": 0.0236,
+      "ci_lo": 0.3001,
+      "ci_hi": 0.3926
+    },
+    "ate_mid_untrimmed": {
+      "est": 0.3217,
+      "se": 0.0249,
+      "ci_lo": 0.2729,
+      "ci_hi": 0.3705
+    },
+    "att_mid": {
+      "est": 0.2873,
+      "se": 0.0228,
+      "ci_lo": 0.2426,
+      "ci_hi": 0.332
+    },
+    "naive_mid": 1.2261,
+    "ate_hi": {
+      "est": 0.2687,
+      "se": 0.0234,
+      "ci_lo": 0.2228,
+      "ci_hi": 0.3146
+    },
+    "ate_hi_untrimmed": {
+      "est": 0.2394,
+      "se": 0.0247,
+      "ci_lo": 0.191,
+      "ci_hi": 0.2878
+    },
+    "att_hi": {
+      "est": 0.2218,
+      "se": 0.0227,
+      "ci_lo": 0.1774,
+      "ci_hi": 0.2662
+    },
+    "naive_hi": 0.9978,
+    "cate": {
+      "mean": 0.3181,
+      "sd": 1.1306,
+      "quantiles": {
+        "p5": -0.437,
+        "p25": -0.0527,
+        "p50": 0.23,
+        "p75": 0.5331,
+        "p95": 1.6145
+      },
+      "pct_negative": 27.7,
+      "calibration_by_quintile": [
+        {
+          "g": "Q1",
+          "effect_pts": -0.2412,
+          "n": 135550,
+          "se": 0.0642,
+          "ci_lo": -0.3671,
+          "ci_hi": -0.1153,
+          "mean_predicted": -0.6508
+        },
+        {
+          "g": "Q2",
+          "effect_pts": 0.0233,
+          "n": 135550,
+          "se": 0.0381,
+          "ci_lo": -0.0514,
+          "ci_hi": 0.0979,
+          "mean_predicted": 0.0096
+        },
+        {
+          "g": "Q3",
+          "effect_pts": 0.2335,
+          "n": 135671,
+          "se": 0.0437,
+          "ci_lo": 0.1479,
+          "ci_hi": 0.3192,
+          "mean_predicted": 0.2245
+        },
+        {
+          "g": "Q4",
+          "effect_pts": 0.5033,
+          "n": 135439,
+          "se": 0.047,
+          "ci_lo": 0.4112,
+          "ci_hi": 0.5954,
+          "mean_predicted": 0.4766
+        },
+        {
+          "g": "Q5",
+          "effect_pts": 1.0898,
+          "n": 135539,
+          "se": 0.076,
+          "ci_lo": 0.9408,
+          "ci_hi": 1.2388,
+          "mean_predicted": 1.5311
+        }
+      ],
+      "q5_minus_q1": {
+        "est": 1.331,
+        "se": 0.0995,
+        "z": 13.37
+      }
+    },
+    "subgroups": {
+      "specialty": [
+        {
+          "group": "Nurse Practitioner",
+          "effect_pts": 0.4621,
+          "n": 139663,
+          "se": 0.0469,
+          "ci_lo": 0.3701,
+          "ci_hi": 0.5541
+        },
+        {
+          "group": "Student in an Organized Health Care Education/Training Program",
+          "effect_pts": 0.0934,
+          "n": 78175,
+          "se": 0.1105,
+          "ci_lo": -0.1232,
+          "ci_hi": 0.3099
+        },
+        {
+          "group": "Physician Assistant",
+          "effect_pts": 0.3069,
+          "n": 71519,
+          "se": 0.0616,
+          "ci_lo": 0.1863,
+          "ci_hi": 0.4275
+        },
+        {
+          "group": "Dentist",
+          "effect_pts": 0.0356,
+          "n": 67638,
+          "se": 0.0165,
+          "ci_lo": 0.0032,
+          "ci_hi": 0.0679
+        },
+        {
+          "group": "Internal Medicine",
+          "effect_pts": 0.7255,
+          "n": 66708,
+          "se": 0.0936,
+          "ci_lo": 0.542,
+          "ci_hi": 0.9089
+        },
+        {
+          "group": "Family Practice",
+          "effect_pts": 0.3161,
+          "n": 61991,
+          "se": 0.0698,
+          "ci_lo": 0.1793,
+          "ci_hi": 0.4528
+        },
+        {
+          "group": "Emergency Medicine",
+          "effect_pts": -0.0256,
+          "n": 40967,
+          "se": 0.0792,
+          "ci_lo": -0.1809,
+          "ci_hi": 0.1297
+        },
+        {
+          "group": "Psychiatry",
+          "effect_pts": 0.6823,
+          "n": 13940,
+          "se": 0.1521,
+          "ci_lo": 0.3841,
+          "ci_hi": 0.9805
+        },
+        {
+          "group": "Hospitalist",
+          "effect_pts": 0.6606,
+          "n": 11519,
+          "se": 0.2283,
+          "ci_lo": 0.2131,
+          "ci_hi": 1.1081
+        },
+        {
+          "group": "Psychiatry & Neurology",
+          "effect_pts": 0.6428,
+          "n": 10521,
+          "se": 0.233,
+          "ci_lo": 0.1862,
+          "ci_hi": 1.0994
+        },
+        {
+          "group": "Obstetrics & Gynecology",
+          "effect_pts": -0.091,
+          "n": 10491,
+          "se": 0.2117,
+          "ci_lo": -0.5059,
+          "ci_hi": 0.3238
+        },
+        {
+          "group": "Optometry",
+          "effect_pts": 0.6846,
+          "n": 7958,
+          "se": 0.3535,
+          "ci_lo": -0.0084,
+          "ci_hi": 1.3775
+        },
+        {
+          "group": "General Surgery",
+          "effect_pts": 0.0475,
+          "n": 7270,
+          "se": 0.2169,
+          "ci_lo": -0.3776,
+          "ci_hi": 0.4726
+        },
+        {
+          "group": "General Practice",
+          "effect_pts": 0.08,
+          "n": 5044,
+          "se": 0.3062,
+          "ci_lo": -0.5202,
+          "ci_hi": 0.6801
+        },
+        {
+          "group": "Physical Medicine and Rehabilitation",
+          "effect_pts": 0.0147,
+          "n": 4543,
+          "se": 0.26,
+          "ci_lo": -0.4949,
+          "ci_hi": 0.5242
+        },
+        {
+          "group": "Neurology",
+          "effect_pts": 0.3887,
+          "n": 4531,
+          "se": 0.2896,
+          "ci_lo": -0.1789,
+          "ci_hi": 0.9563
+        },
+        {
+          "group": "Podiatry",
+          "effect_pts": 0.0843,
+          "n": 4350,
+          "se": 0.1606,
+          "ci_lo": -0.2305,
+          "ci_hi": 0.3991
+        },
+        {
+          "group": "Ophthalmology",
+          "effect_pts": 1.4928,
+          "n": 4227,
+          "se": 0.4512,
+          "ci_lo": 0.6084,
+          "ci_hi": 2.3773
+        },
+        {
+          "group": "Pediatric Medicine",
+          "effect_pts": 0.6866,
+          "n": 3744,
+          "se": 0.6868,
+          "ci_lo": -0.6594,
+          "ci_hi": 2.0327
+        },
+        {
+          "group": "Cardiology",
+          "effect_pts": -0.0458,
+          "n": 3697,
+          "se": 0.2117,
+          "ci_lo": -0.4607,
+          "ci_hi": 0.3692
+        }
+      ],
+      "region": [
+        {
+          "group": "Midwest",
+          "effect_pts": 0.4447,
+          "n": 154996,
+          "se": 0.0516,
+          "ci_lo": 0.3435,
+          "ci_hi": 0.5459
+        },
+        {
+          "group": "Northeast",
+          "effect_pts": 0.326,
+          "n": 160186,
+          "se": 0.057,
+          "ci_lo": 0.2142,
+          "ci_hi": 0.4377
+        },
+        {
+          "group": "South",
+          "effect_pts": 0.2626,
+          "n": 206776,
+          "se": 0.0411,
+          "ci_lo": 0.182,
+          "ci_hi": 0.3432
+        },
+        {
+          "group": "West",
+          "effect_pts": 0.2706,
+          "n": 149802,
+          "se": 0.053,
+          "ci_lo": 0.1667,
+          "ci_hi": 0.3745
+        },
+        {
+          "group": "territory_or_other",
+          "effect_pts": 0.3402,
+          "n": 5989,
+          "se": 0.2194,
+          "ci_lo": -0.0897,
+          "ci_hi": 0.7702
+        }
+      ],
+      "rural_urban": [
+        {
+          "group": "metro",
+          "effect_pts": 0.3188,
+          "n": 605505,
+          "se": 0.0267,
+          "ci_lo": 0.2664,
+          "ci_hi": 0.3711
+        },
+        {
+          "group": "micropolitan",
+          "effect_pts": 0.3542,
+          "n": 43642,
+          "se": 0.0875,
+          "ci_lo": 0.1827,
+          "ci_hi": 0.5258
+        },
+        {
+          "group": "rural",
+          "effect_pts": 0.2558,
+          "n": 8186,
+          "se": 0.1952,
+          "ci_lo": -0.1269,
+          "ci_hi": 0.6385
+        },
+        {
+          "group": "small_town",
+          "effect_pts": 0.3579,
+          "n": 19097,
+          "se": 0.1193,
+          "ci_lo": 0.1241,
+          "ci_hi": 0.5917
+        }
+      ],
+      "volume_tertile": [
+        {
+          "group": "high",
+          "effect_pts": 0.1604,
+          "n": 225718,
+          "se": 0.0287,
+          "ci_lo": 0.1041,
+          "ci_hi": 0.2166
+        },
+        {
+          "group": "low",
+          "effect_pts": 0.4417,
+          "n": 226013,
+          "se": 0.0548,
+          "ci_lo": 0.3342,
+          "ci_hi": 0.5492
+        },
+        {
+          "group": "mid",
+          "effect_pts": 0.3627,
+          "n": 226018,
+          "se": 0.0417,
+          "ci_lo": 0.281,
+          "ci_hi": 0.4445
+        }
+      ],
+      "baseline_brand_share_tertile": [
+        {
+          "group": "high",
+          "effect_pts": 0.4133,
+          "n": 172352,
+          "se": 0.0629,
+          "ci_lo": 0.2899,
+          "ci_hi": 0.5366
+        },
+        {
+          "group": "low",
+          "effect_pts": 0.4245,
+          "n": 172357,
+          "se": 0.0334,
+          "ci_lo": 0.3589,
+          "ci_hi": 0.49
+        },
+        {
+          "group": "mid",
+          "effect_pts": 0.6599,
+          "n": 172345,
+          "se": 0.0454,
+          "ci_lo": 0.5709,
+          "ci_hi": 0.749
+        },
+        {
+          "group": "new in 2024",
+          "effect_pts": -0.2495,
+          "n": 160695,
+          "se": 0.0529,
+          "ci_lo": -0.3532,
+          "ci_hi": -0.1459
+        }
+      ]
+    },
+    "blp": [
+      {
+        "modifier": "log total claims",
+        "coef_pts": -0.1657,
+        "se": 0.0673,
+        "p": 0.0138,
+        "ci_lo": -0.2976,
+        "ci_hi": -0.0337
+      },
+      {
+        "modifier": "log beneficiaries",
+        "coef_pts": -0.136,
+        "se": 0.0677,
+        "p": 0.0445,
+        "ci_lo": -0.2686,
+        "ci_hi": -0.0033
+      },
+      {
+        "modifier": "log cost per claim",
+        "coef_pts": 0.0992,
+        "se": 0.0548,
+        "p": 0.0702,
+        "ci_lo": -0.0082,
+        "ci_hi": 0.2067
+      },
+      {
+        "modifier": "patient mean age",
+        "coef_pts": 0.0295,
+        "se": 0.0437,
+        "p": 0.4992,
+        "ci_lo": -0.0561,
+        "ci_hi": 0.1152
+      },
+      {
+        "modifier": "patient risk score",
+        "coef_pts": 0.048,
+        "se": 0.0348,
+        "p": 0.1682,
+        "ci_lo": -0.0203,
+        "ci_hi": 0.1163
+      },
+      {
+        "modifier": "brand share 2022",
+        "coef_pts": -0.1378,
+        "se": 0.0598,
+        "p": 0.0211,
+        "ci_lo": -0.255,
+        "ci_hi": -0.0207
+      },
+      {
+        "modifier": "share female patients",
+        "coef_pts": 0.0203,
+        "se": 0.0211,
+        "p": 0.3355,
+        "ci_lo": -0.021,
+        "ci_hi": 0.0616
+      },
+      {
+        "modifier": "share dual-eligible",
+        "coef_pts": 0.0141,
+        "se": 0.0257,
+        "p": 0.5827,
+        "ci_lo": -0.0363,
+        "ci_hi": 0.0645
+      },
+      {
+        "modifier": "share under 65",
+        "coef_pts": 0.0202,
+        "se": 0.0297,
+        "p": 0.4967,
+        "ci_lo": -0.0381,
+        "ci_hi": 0.0785
+      },
+      {
+        "modifier": "opioid prescribing rate",
+        "coef_pts": -0.0293,
+        "se": 0.0167,
+        "p": 0.0786,
+        "ci_lo": -0.062,
+        "ci_hi": 0.0033
+      },
+      {
+        "modifier": "specialty: Student / trainee",
+        "coef_pts": -0.3829,
+        "se": 0.1658,
+        "p": 0.0209,
+        "ci_lo": -0.7079,
+        "ci_hi": -0.0579
+      },
+      {
+        "modifier": "specialty: Physician Assistant",
+        "coef_pts": -0.063,
+        "se": 0.0743,
+        "p": 0.3966,
+        "ci_lo": -0.2085,
+        "ci_hi": 0.0826
+      },
+      {
+        "modifier": "specialty: Dentist",
+        "coef_pts": -0.495,
+        "se": 0.0707,
+        "p": 0.0,
+        "ci_lo": -0.6335,
+        "ci_hi": -0.3564
+      },
+      {
+        "modifier": "specialty: Internal Medicine",
+        "coef_pts": 0.4424,
+        "se": 0.1028,
+        "p": 0.0,
+        "ci_lo": 0.2409,
+        "ci_hi": 0.6439
+      },
+      {
+        "modifier": "specialty: Family Practice",
+        "coef_pts": 0.1484,
+        "se": 0.0817,
+        "p": 0.0692,
+        "ci_lo": -0.0117,
+        "ci_hi": 0.3085
+      },
+      {
+        "modifier": "specialty: Emergency Medicine",
+        "coef_pts": -0.4463,
+        "se": 0.0861,
+        "p": 0.0,
+        "ci_lo": -0.6152,
+        "ci_hi": -0.2775
+      },
+      {
+        "modifier": "specialty: Psychiatry",
+        "coef_pts": 0.2009,
+        "se": 0.175,
+        "p": 0.251,
+        "ci_lo": -0.1421,
+        "ci_hi": 0.544
+      },
+      {
+        "modifier": "region: Northeast",
+        "coef_pts": -0.1662,
+        "se": 0.0722,
+        "p": 0.0213,
+        "ci_lo": -0.3076,
+        "ci_hi": -0.0247
+      },
+      {
+        "modifier": "region: South",
+        "coef_pts": -0.1186,
+        "se": 0.0631,
+        "p": 0.0603,
+        "ci_lo": -0.2423,
+        "ci_hi": 0.0052
+      },
+      {
+        "modifier": "region: West",
+        "coef_pts": -0.1101,
+        "se": 0.0715,
+        "p": 0.1233,
+        "ci_lo": -0.2502,
+        "ci_hi": 0.0299
+      },
+      {
+        "modifier": "rural/small town",
+        "coef_pts": 0.1131,
+        "se": 0.0991,
+        "p": 0.2536,
+        "ci_lo": -0.0811,
+        "ci_hi": 0.3073
+      }
+    ]
+  },
+  "all": {
+    "n": 1296540,
+    "n_trimmed_sample": 1164791,
+    "pct_paid": 52.09,
+    "ate_mid": {
+      "est": 0.5879,
+      "se": 0.0159,
+      "ci_lo": 0.5568,
+      "ci_hi": 0.619
+    },
+    "ate_mid_untrimmed": {
+      "est": 0.6103,
+      "se": 0.0163,
+      "ci_lo": 0.5782,
+      "ci_hi": 0.6423
+    },
+    "att_mid": {
+      "est": 0.7213,
+      "se": 0.0191,
+      "ci_lo": 0.684,
+      "ci_hi": 0.7586
+    },
+    "naive_mid": 3.883
+  }
+}
