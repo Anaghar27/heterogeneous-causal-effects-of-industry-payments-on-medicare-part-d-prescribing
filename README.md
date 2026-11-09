@@ -18,20 +18,23 @@ We will link two public CMS datasets at the prescriber level using each prescrib
 8. [Exploratory analysis](#exploratory-analysis)
 9. [Separability, overlap and matching](#separability-overlap-and-matching)
 10. [Week 1 results summary](#week-1-results-summary)
-11. [Limitations](#limitations)
-12. [Next steps](#next-steps)
-13. [Data handling and privacy](#data-handling-and-privacy)
-14. [References](#references)
+11. [Week 2: propensity models, balance and validation](#week-2-propensity-models-balance-and-validation)
+12. [Week 2: causal estimates](#week-2-causal-estimates)
+13. [Limitations](#limitations)
+14. [Next steps](#next-steps)
+15. [Data handling and privacy](#data-handling-and-privacy)
+16. [References](#references)
 
 ## Project status
 
 | Milestone | Dates | Status |
 |---|---|---|
 | Week 1: data pipeline, NPI linkage, cohort and variable spec, EDA on real CMS data | Oct 12-23 | Complete |
-| Weeks 2-3: calibrated propensity models, weighting, overlap diagnostics, IHDP benchmark | Oct 26 - Nov 6 | Next |
-| Later: doubly robust ATE and CATE estimation, sensitivity analysis, final report | | Planned |
+| Week 2: calibrated propensity models, weighting and love plot, overlap diagnostics, IHDP benchmark | Oct 26 - Nov 6 | Complete |
+| Week 2: first doubly robust ATE and CATE estimates, causal forest cross-check | Oct 26 - Nov 6 | Complete (first run) |
+| Next: sensitivity analysis, Layer B explainability, ACIC and Twins benchmarks, payment amount as treatment, final report | | Planned |
 
-Week 1 replaces the synthetic pilot results used in the proposal with results on the real CMS files.
+Week 1 replaced the synthetic pilot results used in the proposal with results on the real CMS files. Week 2 completed stage 3 (propensity modeling and balancing) and ran stage 4 for the first time.
 
 ## Study design
 
@@ -53,15 +56,18 @@ Week 1 replaces the synthetic pilot results used in the proposal with results on
 ├── requirements.txt          pinned package versions
 ├── scripts/
 │   ├── config.py             paths, years, raw file names, NPI cleaning
-│   ├── 01_inspect_schemas.py ... 11_build_report.py   (see "How to run")
+│   ├── 01_inspect_schemas.py ... 11_build_report.py   data pipeline and EDA (Week 1)
+│   └── 12_propensity.py ... 15_causal.py             propensity, balance, IHDP, causal estimates (Week 2)
 ├── data/
 │   ├── README.md             raw-file checksums and row counts at each step (generated)
 │   ├── logs/                 aggregate JSON logs from every step (committed)
+│   ├── external/ihdp/        IHDP benchmark files (git-ignored, downloaded)
 │   ├── interim/              slim row-level payments (git-ignored, regenerated)
 │   └── processed/            per-NPI and linked parquet files (git-ignored, regenerated)
 └── reports/
     ├── eda_summary.md        EDA tables (generated)
     ├── figures/              EDA charts (generated)
+    │   └── model/            propensity, balance, benchmark and causal-effect charts (generated)
     └── report/               local extended EDA and PDF summary (git-ignored)
 ```
 
@@ -78,6 +84,7 @@ Notes:
 
 - Use **Part D by Provider** (one row per prescriber), not *by Provider and Drug*. The Part D zip files are read directly, without unzipping.
 - Only the **General** Open Payments file is used (not Research or Ownership).
+- **IHDP benchmark** (stage 6 validation): the 10 replications distributed with CEVAE [13], `ihdp_npci_1.csv` ... `ihdp_npci_10.csv` from `https://raw.githubusercontent.com/AMLab-Amsterdam/CEVAE/master/datasets/IHDP/csv/`, saved to `data/external/ihdp/` (about 160 KB each).
 - CMS republishes Open Payments as records are corrected (these files were published 06/30/2026). The SHA-256 checksum of every file used is recorded in [data/README.md](data/README.md), so a later download can be checked against the exact version used here.
 
 ## How to run
@@ -97,12 +104,18 @@ python scripts/08_eda.py
 python scripts/09_feature_check.py
 python scripts/10_eda_extended.py
 python scripts/11_build_report.py             # optional local PDF summary
+python scripts/12_propensity.py               # ~11 min: cross-fitted propensity scores and weights
+python scripts/13_balance.py                  # ~12 min: balance, overlap by specialty, Layer A SHAP
+python scripts/14_ihdp_benchmark.py           # ~1 min: needs data/external/ihdp/
+python scripts/15_causal.py dr                # ~6 min: AIPW / DR-learner ATE, ATT, CATE, subgroups
+python scripts/15_causal.py forest            # ~5 min: causal forest on a 200K subsample
 ```
 
 - **Memory:** payments are read in 1,000,000-row chunks, so peak memory stays near 1.5 GB regardless of file size. The full pipeline runs on a 16 GB laptop.
 - **Disk:** about 16 GB for the raw files; the derived files total about 1.1 GB. After step 05 the raw payments CSVs can be deleted; the slim row-level copies in `data/interim/` keep every field needed later.
 - **Test runs:** `02_reduce_payments.py {year} --nrows 300000` writes `_test` files only.
-- **Environment:** Python 3.10; versions pinned in [requirements.txt](requirements.txt).
+- **Long runs:** scripts 14 and 15 write a `.done` marker in `data/logs/` when they finish, so an interrupted session can check completion without re-running. Each script can run as its own process.
+- **Environment:** Python 3.10; versions pinned in [requirements.txt](requirements.txt), including `econml` 0.17.0 and `shap` 0.49.1 for scripts 13-15.
 
 ## Pipeline in detail
 
@@ -119,6 +132,10 @@ python scripts/11_build_report.py             # optional local PDF summary
 | `09_feature_check.py` | Do unused Part D columns matter as confounders? | `logs/feature_check.json` |
 | `10_eda_extended.py` | Outcome drivers, separability, propensity matching | `reports/report/` (local) |
 | `11_build_report.py` | Local PDF summary of all steps | `reports/report/` (local) |
+| `12_propensity.py` | 5-fold cross-fitted logistic and boosting propensity scores with isotonic calibration, for three cohorts; Crump trimming; IPW, ATT and overlap weights | `processed/propensity_2023_2024`, `logs/propensity.json` |
+| `13_balance.py` | Balance on every covariate under each weighting; overlap by specialty; Layer A SHAP on the propensity model | `logs/balance.json`, `reports/figures/model/p03`-`p05` |
+| `14_ihdp_benchmark.py` | Naive, IPW, DR-learner and causal forest on IHDP, scored against known effects | `logs/ihdp_benchmark.json`, `reports/figures/model/b01` |
+| `15_causal.py` | `dr`: AIPW ATE and ATT at all three outcome bounds, DR-learner CATE, heterogeneity check, subgroup effects, best linear projection. `forest`: causal forest cross-check | `logs/causal_dr.json`, `logs/causal_forest.json`, `processed/cate_incident`, `reports/figures/model/c01`-`c04` |
 
 ### Step 2: Open Payments reduction
 
@@ -307,24 +324,104 @@ Matching removes about 85% of the raw gap. Standard errors (about 0.02 points) i
 
 Most of the raw gap reflects who is paid (specialty, practice size, prior prescribing). A small association that grows with the payment amount remains. **These are descriptive checks, not causal estimates.**
 
+## Week 2: propensity models, balance and validation
+
+**Who is compared.** Every model is fit on three cohorts. *All* is every prescriber with the Week 1 covariates; *all with history* adds 2022 payment status and dollars; *incident* keeps only prescribers with no 2022 payment, comparing the newly paid in 2023 with the never paid. About 530,000 prescribers were paid in both years, so their 2022 baseline already reflects payments; the incident cohort avoids that and is the **main analysis**.
+
+| | All | All with history | **Incident (main)** |
+|---|---|---|---|
+| Prescribers | 1,383,580 | 1,383,580 | **737,618** |
+| Propensity AUC, logistic / boosting | 0.755 / 0.786 | 0.861 / 0.871 | **0.666 / 0.692** |
+| Propensity between 0.1 and 0.9 | 90.6% | 72.2% | **87.0%** |
+| Largest IPW weight | 66 | 768 | **22** |
+| Effective sample size | 60.6% | 16.7% | **86.3%** |
+| Largest SMD before / after IPW | 0.46 / 0.004 | 1.53 / 0.007 | **0.36 / 0.006** |
+
+Adding 2022 payments makes payment too predictable: one prescriber would carry a weight of 768 and only 17% of the sample would effectively count, so that cohort is dropped.
+
+**Propensity models.** Logistic regression and gradient boosting, each with 5-fold cross-fitting (every score comes from a model that never saw that prescriber) and isotonic recalibration on 15% of each training fold. Boosting has the lowest Brier score in every cohort and is the primary model. Calibration error is about 0.002, so recalibration changes almost nothing. Extreme scores are trimmed with the Crump et al. rule [15].
+
+![Calibration](reports/figures/model/p01_calibration.png)
+![Overlap by cohort](reports/figures/model/p02_overlap_by_spec.png)
+
+**Balance.** Every covariate, including one indicator per specialty group (99 in all), has an absolute SMD below 0.1 after weighting, in all three cohorts and under IPW, ATT and overlap weights [16]. Before weighting, 24 covariates failed.
+
+![Love plot](reports/figures/model/p03_love_plot.png)
+
+**Overlap by specialty.** Thinnest for students and trainees (54% with propensity 0.1 to 0.9), ophthalmology (71%), cardiology (75%) and gastroenterology (77%); effects for these groups are reported with care.
+
+![Overlap by specialty](reports/figures/model/p04_overlap_by_specialty.png)
+
+**Layer A explainability (diagnostic only).** SHAP on a boosting propensity model ranks specialty first (0.52 mean absolute log-odds), then cost per claim, region and being new in 2024. Categories must be one-hot encoded for SHAP: with native categorical splits the explainer mis-attributes them and specialty looks unimportant.
+
+![Layer A SHAP](reports/figures/model/p05_propensity_shap.png)
+
+**IHDP benchmark.** 747 children, 10 replications, true effects known; 90/10 split; lower is better.
+
+| Estimator | ATE error | sqrt PEHE, out-of-sample |
+|---|---|---|
+| Naive difference | 0.28 | 3.90 |
+| IPW | **0.15** | 3.92 |
+| DR-learner | 0.26 | **1.91** |
+| Causal forest | 0.54 | 2.62 |
+
+The DR-learner recovers individual effects best. Its first run failed (about three times the error) because a boosting propensity model returned scores near 0 and 1 with only about 140 treated children. A logistic propensity with clipping at 0.05 fixed it, and the same setting is used on the CMS data.
+
+![IHDP benchmark](reports/figures/model/b01_ihdp_benchmark.png)
+
+## Week 2: causal estimates
+
+**Method.** Augmented inverse probability weighting (AIPW) [17, 18] on the incident cohort, using prescribers with informative outcome bounds. Outcome models for each arm are cross-fitted on the propensity folds, and the propensity is clipped to 0.05-0.95. The ATE is the mean of the doubly robust pseudo-outcome on the Crump-trimmed sample (610,137 prescribers). The DR-learner CATE [7] regresses that pseudo-outcome on the features with cross-fitted boosting. A causal forest [6] on a 200,000-prescriber subsample is the cross-check.
+
+| Estimate | Effect on 2024 brand share (points) | 95% CI |
+|---|---|---|
+| Raw difference, newly paid vs never paid | +1.23 | |
+| **ATE, AIPW (main)** | **+0.35** | 0.30 to 0.39 |
+| ATE at the low / high outcome bounds | +0.42 / +0.27 | positive at both |
+| ATT, AIPW | +0.29 | 0.24 to 0.33 |
+| Causal forest | +0.34 | wide (subsample) |
+| ATE, prescribers with a 2022 baseline | +0.49 | 0.44 to 0.55 |
+| ATE, prescribers new in 2024 (no baseline) | -0.26 | reported separately |
+| Secondary: all prescribers, ATE / ATT | +0.59 / +0.72 | raw 3.88 |
+
+Adjustment removes about 72% of the raw difference, and the two estimators agree. Prescribers new in 2024 have no baseline, so their adjustment rests on filled-in values; they are reported separately.
+
+![ATE](reports/figures/model/c01_ate.png)
+
+**The heterogeneity is real.** Grouping prescribers into fifths of predicted CATE, observed effects rise from -0.24 in the bottom fifth to +1.09 in the top (difference 1.33, z = 13.4), with the middle fifths in order.
+
+![CATE](reports/figures/model/c02_cate.png)
+
+**Who responds most (Layer B).**
+
+- **Smaller practices respond more:** +0.44 in the lowest volume third vs +0.16 in the highest.
+- **Mid-range brand prescribers respond most:** 2022 brand share middle third +0.66, lowest +0.42, highest +0.41.
+- **By specialty:** largest group effects in ophthalmology (+1.49), internal medicine (+0.73) and psychiatry (+0.68); about zero for dentists (+0.04) and emergency medicine (-0.03).
+- **Best linear projection** [10]: internal medicine raises the effect by 0.44 points relative to nurse practitioners; larger practice (-0.17 per SD of claims) and higher 2022 brand share (-0.14 per SD) lower it; dentists, emergency medicine and trainees are significantly lower. Patient mix and location matter little.
+
+![Effect by specialty](reports/figures/model/c03_effect_by_specialty.png)
+![Effect modifiers](reports/figures/model/c04_effect_modifiers.png)
+
 ## Limitations
 
 - **Unmeasured confounding.** Manufacturers may target prescribers already about to adopt new brand-name drugs. A sensitivity analysis is planned [14].
 - **Suppression.** Outcome results must be reported at the low, middle and high bounds. Brand cost is a secondary outcome only.
-- **No baseline for new prescribers.** 16% of prescribers are new in 2024; they will be analyzed separately or with the indicator.
+- **No baseline for new prescribers.** 16% of prescribers are new in 2024; their estimated effect is negative but unreliable, and they are reported separately.
+- **Thin overlap** for trainees, cardiology, ophthalmology and gastroenterology.
+- **Causal forest on a subsample.** Its interval is wide; a full-cohort run is planned.
+- **Modifiers are descriptive.** Effect modifiers show where the effect is larger, not why.
 - **Experience.** Years in practice is not in these files; it would need the NPPES registry.
 - **Second cohort.** Payments 2022 -> prescribing 2023 has no pre-payment year in the current data.
 
 ## Next steps
 
-Oct 26 - Nov 6:
+Week 2's four steps (calibrated propensity models, weighted sample and love plot, overlap diagnostics, IHDP benchmark) are done, along with a first run of the causal models. Next:
 
-1. **Calibrated propensity models.** Logistic and gradient boosting, calibrated, with trimming of extreme scores.
-2. **Weighted sample and love plot.** Inverse probability weighting with every covariate SMD below 0.1.
-3. **Overlap diagnostics.** By specialty, focusing on trainees, cardiology and ophthalmology.
-4. **Benchmark on IHDP.** Validate the estimators on data with known effects [11, 12].
-
-Then: doubly robust ATE and CATE estimation (DR-learner, causal forest [5-8, 10]), with the dose as a secondary treatment, and the omitted-variable sensitivity analysis [14].
+1. **Sensitivity analysis** [14]: how strong would an unmeasured confounder have to be to erase the effect.
+2. **Layer B explainability:** SHAP on the CATE model and a short policy tree of who responds.
+3. **More benchmarks:** ACIC and Twins [12, 13].
+4. **Payment amount and type as treatments.**
+5. **Causal forest on the full cohort**, and a subgroup-order comparison with the DR-learner.
 
 ## Data handling and privacy
 
@@ -347,3 +444,7 @@ Then: doubly robust ATE and CATE estimation (DR-learner, causal forest [5-8, 10]
 [12] Dorie V, Hill J, Shalit U, Scott M, Cervone D. Automated versus do it yourself methods for causal inference: Lessons learned from a data analysis competition. Statistical Science, 34(1), 43–68, 2019.
 [13] Louizos C, Shalit U, Mooij JM, Sontag D, Zemel R, Welling M. Causal effect inference with deep latent variable models. NeurIPS, 2017.
 [14] Cinelli C, Hazlett C. Making sense of sensitivity: Extending omitted variable bias. Journal of the Royal Statistical Society, Series B, 82(1), 39–67, 2020.
+[15] Crump RK, Hotz VJ, Imbens GW, Mitnik OA. Dealing with limited overlap in estimation of average treatment effects. Biometrika, 96(1), 187–199, 2009.
+[16] Li F, Morgan KL, Zaslavsky AM. Balancing covariates via propensity score weighting. Journal of the American Statistical Association, 113(521), 390–400, 2018.
+[17] Robins JM, Rotnitzky A, Zhao LP. Estimation of regression coefficients when some regressors are not always observed. Journal of the American Statistical Association, 89(427), 846–866, 1994.
+[18] Chernozhukov V, Chetverikov D, Demirer M, Duflo E, Hansen C, Newey W, Robins J. Double/debiased machine learning for treatment and structural parameters. The Econometrics Journal, 21(1), C1–C68, 2018.
