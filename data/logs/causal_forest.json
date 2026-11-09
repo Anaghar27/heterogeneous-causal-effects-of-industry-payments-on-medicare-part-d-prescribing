@@ -1,0 +1,140 @@
+{
+  "n": 200000,
+  "ate": 0.3356,
+  "ate_ci": [
+    -0.2612,
+    0.9325
+  ],
+  "cate_sd": 0.3988,
+  "cate_quantiles": {
+    "p5": -0.2607,
+    "p25": 0.1035,
+    "p50": 0.2898,
+    "p75": 0.5539,
+    "p95": 1.0696
+  },
+  "importance": {
+    "log cost per claim": 0.2139,
+    "brand share 2022": 0.1684,
+    "log total claims": 0.1174,
+    "new in 2024 (no 2022 data)": 0.1137,
+    "log beneficiaries": 0.1046,
+    "patient risk score": 0.0919,
+    "patient mean age": 0.0668,
+    "opioid prescribing rate": 0.049,
+    "specialty": 0.0213,
+    "x_benes_suppressed": 0.0124,
+    "region": 0.0088,
+    "share female patients": 0.0079,
+    "x22_share_female_missing": 0.0072,
+    "share dual-eligible": 0.0059,
+    "x22_opioid_rate_missing": 0.0044,
+    "share under 65": 0.0026,
+    "x22_share_dual_missing": 0.0017,
+    "x22_share_under65_missing": 0.0013,
+    "ruca_group": 0.0007
+  },
+  "specialty_mean_cate": [
+    {
+      "specialty": "Nurse Practitioner",
+      "mean": 0.3429,
+      "size": 45606
+    },
+    {
+      "specialty": "Physician Assistant",
+      "mean": 0.2146,
+      "size": 23452
+    },
+    {
+      "specialty": "Dentist",
+      "mean": 0.1209,
+      "size": 22114
+    },
+    {
+      "specialty": "Internal Medicine",
+      "mean": 0.4483,
+      "size": 20143
+    },
+    {
+      "specialty": "Family Practice",
+      "mean": 0.3235,
+      "size": 18953
+    },
+    {
+      "specialty": "Emergency Medicine",
+      "mean": 0.2775,
+      "size": 11846
+    },
+    {
+      "specialty": "Student in an Organized Health Care Education/Training Program",
+      "mean": 0.6159,
+      "size": 11595
+    },
+    {
+      "specialty": "Psychiatry",
+      "mean": 0.5279,
+      "size": 4235
+    },
+    {
+      "specialty": "Hospitalist",
+      "mean": 0.5143,
+      "size": 3661
+    },
+    {
+      "specialty": "Obstetrics & Gynecology",
+      "mean": 0.4524,
+      "size": 3397
+    },
+    {
+      "specialty": "Optometry",
+      "mean": 0.2414,
+      "size": 2622
+    },
+    {
+      "specialty": "Psychiatry & Neurology",
+      "mean": 0.6159,
+      "size": 2525
+    },
+    {
+      "specialty": "General Surgery",
+      "mean": 0.2793,
+      "size": 2296
+    },
+    {
+      "specialty": "General Practice",
+      "mean": 0.305,
+      "size": 1524
+    },
+    {
+      "specialty": "Neurology",
+      "mean": 0.4397,
+      "size": 1459
+    },
+    {
+      "specialty": "Physical Medicine and Rehabilitation",
+      "mean": 0.3886,
+      "size": 1430
+    },
+    {
+      "specialty": "Podiatry",
+      "mean": 0.3681,
+      "size": 1359
+    },
+    {
+      "specialty": "Ophthalmology",
+      "mean": 0.0838,
+      "size": 1314
+    },
+    {
+      "specialty": "Cardiology",
+      "mean": 0.3481,
+      "size": 1191
+    },
+    {
+      "specialty": "Pediatric Medicine",
+      "mean": 0.572,
+      "size": 1154
+    }
+  ],
+  "runtime_s": 301
+}

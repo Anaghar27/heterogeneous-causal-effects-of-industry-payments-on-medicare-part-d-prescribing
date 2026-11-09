@@ -31,3 +31,8 @@ desktop.ini
 # Private report (not shared): PDF and its working figures
 reports/report/
 *.pdf
+
+# Detached-run scratch (logs and done markers)
+data/logs/run_*.out
+data/logs/run_*.err
+*.done
